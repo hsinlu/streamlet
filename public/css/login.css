@@ -1,0 +1,103 @@
+.errors {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  z-index: 999;
+}
+body {
+  background: #242628;
+  color: #ffffff;
+}
+.container-fuild {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+.login-box {
+  display: table;
+  height: 90%;
+  padding: 0;
+  margin: 0 auto;
+}
+.login-box form {
+  display: table-cell;
+  vertical-align: middle;
+}
+.login-box form input {
+  background: #3c4043;
+  padding-left: 35px;
+}
+.login-box form input:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+.login-box form .form-control {
+  color: #ffffff;
+  height: 100%;
+  border: none !important;
+}
+.login-box form .form-control:focus,
+.login-box form .form-control:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.login-box form .form-group span,
+.login-box form .form-group input {
+  min-height: 40px;
+  min-width: 250px;
+}
+.login-box form .form-group span {
+  display: block;
+}
+.login-box form .form-group span.email {
+  position: relative;
+}
+.login-box form .form-group span.email:before {
+  position: absolute;
+  -webkit-transform: translateY(-52%);
+      -ms-transform: translateY(-52%);
+          transform: translateY(-52%);
+  top: 50%;
+  margin: 0 15px;
+  font-family: 'FontAwesome';
+  content: '\f003';
+}
+.login-box form .form-group span.password {
+  position: relative;
+}
+.login-box form .form-group span.password:before {
+  position: absolute;
+  -webkit-transform: translateY(-52%);
+      -ms-transform: translateY(-52%);
+          transform: translateY(-52%);
+  top: 50%;
+  margin: 0 15px;
+  font-family: 'FontAwesome';
+  content: '\f023';
+}
+.login-box form div.remember-me {
+  margin-top: 10px;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.login-box form div.remember-me input[type="checkbox"] {
+  margin-right: 5px;
+}
+.login-box form div.remember-me label {
+  font-weight: 500;
+}
+.login-box form div.form-actions {
+  margin-top: 10px;
+}
+.login-box form div.form-actions button[type="submit"] {
+  margin-right: 5px;
+}
+.login-box form div.form-actions a {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=login.css.map */

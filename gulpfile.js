@@ -12,5 +12,23 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+	// bootstrap
+    mix.copy('bower_components/bootstrap/dist/css/bootstrap.min.css', 'public/css');
+    mix.copy('bower_components/bootstrap/dist/fonts', 'public/fonts');
+    mix.copy('bower_components/bootstrap/dist/js/bootstrap.min.js', 'public/js');
+    // fontawesome
+    mix.copy('bower_components/fontawesome/css/font-awesome.min.css', 'public/css');
+    mix.copy('bower_components/fontawesome/fonts', 'public/fonts');
+    // jquery
+    mix.copy('bower_components/jquery/dist/jquery.min.js', 'public/js');
+    // select2
+    mix.copy('bower_components/select2/dist/css/select2.min.css', 'public/css');
+    mix.copy('bower_components/select2/dist/js/select2.min.js', 'public/js');
+    // vue
+    mix.copy('bower_components/vue/dist/vue.min.js', 'public/js');
+
+    mix.less('streamlet.less');
+    mix.less('admin/login.less');
+    mix.less('admin/setup.less');
+    mix.less('admin/admin.less');
 });

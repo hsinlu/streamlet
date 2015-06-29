@@ -1,0 +1,72 @@
+@import "../mixins.less";
+
+@import "variables.less";
+
+@import "errors.less";
+
+body {
+	background: @background-inverse-color;
+	color: @color;
+}
+
+.container-fuild {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.setup-box {
+	background: fadeout(lightgray, 70%);
+	display: table;
+	height: 90%;
+	padding: 20px;
+	margin: 15px auto;
+	max-width: 520px;
+
+	form {
+		display: table-cell;
+		vertical-align: middle;
+
+		label {
+			font-weight: 400;
+		}
+
+		input,
+		textarea {
+			background: @input-background-color;
+
+			&:focus {
+				background: @input-focus-background-color;
+			}
+		}
+
+		.form-control {
+			color: @color;
+			height: 100%;
+			border: none !important;			
+			width: 300px;
+			min-height: 40px;
+		}
+
+		.form-control:focus,
+		.form-control:active {
+			outline: none !important;
+			border: none !important;
+			box-shadow: none !important;
+		}
+
+		div.form-actions {
+			margin-top: 10px;
+
+			button[type="submit"] {
+				margin-right: 5px;
+			}
+
+			a {
+				color: #646d70;
+			}
+		}
+	}
+}

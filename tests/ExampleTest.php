@@ -13,6 +13,8 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
+        factory(App\User::class)->make();
+
         $this->visit('/')
              ->see('Laravel 5');
     }

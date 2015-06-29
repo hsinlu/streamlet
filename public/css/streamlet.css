@@ -1,0 +1,150 @@
+body {
+  background-color: #f5f5f5 !important;
+  color: #666666;
+  padding-top: 100px;
+  line-height: 2;
+}
+a,
+.navbar .navbar-nav > li > a {
+  color: #666666;
+}
+a:hover,
+.navbar .navbar-nav > li a:hover {
+  color: #ff0a60;
+}
+.navbar {
+  background: #fff;
+  padding: 10px;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.navbar-brand {
+  margin-top: -10px;
+}
+.navbar-brand small {
+  font-size: 10px;
+}
+.search {
+  width: 200px;
+  padding: 0 5px 0 5px;
+}
+.pagination li > a,
+.pagination li > span {
+  color: #666666;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+.pagination li > a:hover {
+  background-color: #f5f5f5;
+}
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover,
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover {
+  background-color: #ff0a60;
+  border-color: #ff0a60;
+}
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #242628;
+}
+@media (min-width: 768px) {
+  footer .fllowme {
+    float: right;
+    margin-right: 30px;
+  }
+}
+.widget {
+  background: #ffffff;
+  border: #e7e7e7 1px;
+  margin-bottom: 30px;
+}
+.widget-profile .cover {
+  background-size: cover;
+  background: url("../images/sticky.jpg") no-repeat center center;
+  height: 110px;
+}
+.widget-profile .avatar img {
+  position: absolute;
+  top: 40px;
+  left: 20%;
+  margin-left: -47px;
+  width: 95px;
+  height: 95px;
+  border: solid 4px #FFF;
+}
+.widget-profile .bio {
+  padding: 10px 20px 30px 20px;
+}
+.widget-categories {
+  padding: 20px;
+}
+.widget-categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.widget-categories ul li i {
+  margin-right: 5px;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.widget-tags {
+  padding: 20px;
+}
+.widget-article {
+  padding: 20px 40px 20px 40px;
+}
+.article > .article-header > .article-meta > a {
+  margin-right: 20px;
+}
+.article > .article-thumbnail {
+  padding: 40px 0 10px 0;
+}
+.article > .article-thumbnail img {
+  width: 100%;
+}
+.article > .article-content {
+  padding: 20px 0 20px 0;
+  border-bottom: solid 1px #e8e8e8;
+}
+.article > .article-actions {
+  margin-bottom: 50px;
+}
+.article > .article-actions > .read-more {
+  border-top: solid 1px #ff0a60;
+  margin-top: -1px;
+  padding: 10px 0 10px 0;
+}
+.article > .article-actions > .share {
+  padding: 10px 0 10px 0;
+  margin-right: 30px;
+}
+.article > .article-actions > .share > span {
+  margin-right: 10px;
+}
+.article > .article-actions > .share a {
+  margin-right: 3px;
+}
+.widget-recent {
+  padding: 20px;
+}
+.widget-recent ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.widget-recent ul li i {
+  margin-right: 5px;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=streamlet.css.map */

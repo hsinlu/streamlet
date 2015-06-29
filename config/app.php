@@ -143,7 +143,13 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
+        /*
+         * Other Service Providers...
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Overtrue\LaravelPinyin\ServiceProvider::class,
     ],
 
     /*

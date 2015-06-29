@@ -1,0 +1,64 @@
+.errors {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  z-index: 999;
+}
+body {
+  background: #242628;
+  color: #ffffff;
+}
+.container-fuild {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.setup-box {
+  background: rgba(211, 211, 211, 0.3);
+  display: table;
+  height: 90%;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 520px;
+}
+.setup-box form {
+  display: table-cell;
+  vertical-align: middle;
+}
+.setup-box form label {
+  font-weight: 400;
+}
+.setup-box form input,
+.setup-box form textarea {
+  background: #3c4043;
+}
+.setup-box form input:focus,
+.setup-box form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+.setup-box form .form-control {
+  color: #ffffff;
+  height: 100%;
+  border: none !important;
+  width: 300px;
+  min-height: 40px;
+}
+.setup-box form .form-control:focus,
+.setup-box form .form-control:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.setup-box form div.form-actions {
+  margin-top: 10px;
+}
+.setup-box form div.form-actions button[type="submit"] {
+  margin-right: 5px;
+}
+.setup-box form div.form-actions a {
+  color: #646d70;
+}
+
+/*# sourceMappingURL=setup.css.map */

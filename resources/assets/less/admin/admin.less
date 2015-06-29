@@ -1,0 +1,32 @@
+// variables
+@import "variables.less";
+
+@import "../mixins.less";
+
+@import "article-edit.less";
+@import "dashboard.less";
+
+@import "errors.less";
+@import "navbar.less";
+
+body {
+	background-color: @background-color !important;
+  	padding-top: 75px;
+}
+
+textarea {
+	resize: none;
+}
+
+.title {
+	border: 0px;
+	margin: 0px;
+	padding: 6px 12px;
+	font-size: 25px;
+	height: 50px;
+
+	&:focus {
+		outline: 0;
+		border: 0px;
+	}
+}

@@ -1,0 +1,117 @@
+@import "../mixins.less";
+
+@import "variables.less";
+
+@import "errors.less";
+
+body {
+	background: @background-inverse-color;
+	color: @color;
+}
+
+.container-fuild {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+}
+
+.login-box {
+	display: table;
+	height: 90%;
+	padding: 0;
+	margin: 0 auto;
+
+	form {
+		display: table-cell;
+		vertical-align: middle;
+
+		input {
+			background: @input-background-color;
+			padding-left: 35px;
+
+			&:focus {
+				background: @input-focus-background-color;
+			}
+		}
+
+		.form-control {
+			color: @color;
+			height: 100%;
+			border: none !important;
+		}
+
+		.form-control:focus,
+		.form-control:active {
+			outline: none !important;
+			border: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-group {
+
+			span,
+			input {
+				min-height: 40px;
+				min-width: 250px;
+			}
+
+			span {
+				display: block;
+
+				&.email {
+					position: relative;
+					
+					&:before {
+						position: absolute;
+						transform: translateY(-52%);
+						top: 50%;
+						margin: 0 15px;
+						font-family: 'FontAwesome';
+						content: '\f003';
+					}
+				}
+
+				&.password {
+					position: relative;
+
+					&:before {
+						position: absolute;
+						transform: translateY(-52%);
+						top: 50%;
+						margin: 0 15px;
+						font-family: 'FontAwesome';
+						content: '\f023';
+					}
+				}
+			}
+		}
+
+		div.remember-me {
+			margin-top: 10px;
+			.opacity(0.6);
+
+			input[type="checkbox"] {
+				margin-right: 5px;
+			}
+
+			label {
+				font-weight: 500;
+			}
+		}
+
+		div.form-actions {
+			margin-top: 10px;
+
+			button[type="submit"] {
+				margin-right: 5px;
+			}
+
+			a {
+				color: @color;
+			}
+		}
+	}
+}
