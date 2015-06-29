@@ -39,8 +39,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())
-                    <li class="{{ is_pattern(['dashboard', 'dashboard/*']) ? 'active' : '' }}">
-                        <a href="{{ url('dashboard') }}">Dashboard</a>
+                    <li class="{{ is_pattern(['articles/hub', 'articles/hub/*']) ? 'active' : '' }}">
+                        <a href="{{ url('articles/hub/') }}">Hub</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"

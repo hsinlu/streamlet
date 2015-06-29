@@ -23,6 +23,23 @@ class ArticlesController extends Controller
     }
 
     /**
+     * Edit or delete article
+     * 
+     * @param  string $slug [description]
+     * @return [type]       [description]
+     */
+    public function hub($slug = '')
+    {
+        $articles = Article::orderby('published_at', 'desc')->paginate(8);
+        $article = Article::with('tags', 'category')->where('slug', empty($slug) ? $articles->first()->slug : $slug)->firstOrFail();
+
+        return view('articles.hub', [
+            'articles' => $articles,
+            'article' => $article,
+        ]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return Response
@@ -95,7 +112,7 @@ class ArticlesController extends Controller
         $article->save();
         $article->tags()->attach($tagids);
 
-        return redirect('dashboard');
+        return redirect('hub');
     }
 
     /**
@@ -146,7 +163,7 @@ class ArticlesController extends Controller
         $article->update();
         $article->tags()->attach($tagids);
 
-        return redirect('dashboard');
+        return redirect('hub');
     }
 
     /**
@@ -158,6 +175,6 @@ class ArticlesController extends Controller
     public function destroy($slug)
     {
         Article::where('slug', $slug)->delete();
-        return redirect('dashboard');
+        return redirect('hub');
     }
 }

@@ -30,18 +30,18 @@
 .cke_bottom {
   border: 0;
 }
-.dashboard {
+.hub {
   padding: 10px;
   margin: 0px;
   background: #fff;
 }
-.dashboard .dashboard-list .list-group-item p {
+.hub .hub-list .list-group-item p {
   margin-top: 20px;
 }
-.dashboard .dashboard-content h2 {
+.hub .hub-content h2 {
   margin: 15px 0;
 }
-.dashboard .dashboard-content .action-bar {
+.hub .hub-content .action-bar {
   display: inline;
 }
 .errors {

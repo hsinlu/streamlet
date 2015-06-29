@@ -1,12 +1,12 @@
 @extends('admin')
 
 @section('content')
-<div class="dashboard">
+<div class="hub">
 <div class="row">
     <div class="col-md-4">
-        <div class="list-group dashboard-list">
+        <div class="list-group hub-list">
             @foreach($articles as $item)
-                <a href="{{ url('dashboard/' . $item->slug) . '?page=' . $articles->currentPage() }}" class="list-group-item {{ $item->slug == $article->slug ? 'active' : '' }}">
+                <a href="{{ url('articles/hub/' . $item->slug) . '?page=' . $articles->currentPage() }}" class="list-group-item {{ $item->slug == $article->slug ? 'active' : '' }}">
                     {{ $item->title }}
                     <p class="list-group-item-text">
                         {{ $item->published_at }}
@@ -17,7 +17,7 @@
         {!! $articles->render() !!}
     </div>
     <div class="col-md-8">
-        <div class="dashboard-content">
+        <div class="hub-content">
             <div class="action-bar">
                 <a class="btn btn-default" href="{{ url('articles/edit/' . $article->slug) }}">
                     <i class="fa fa-pencil"></i>&nbsp;{{ trans('strings.edit') }}
