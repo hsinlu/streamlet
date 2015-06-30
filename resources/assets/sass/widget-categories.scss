@@ -1,16 +1,16 @@
 .widget-categories {
-  padding: 20px;
+    padding: 20px;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
 
-    li {
-    	i {
-    		margin-right: 5px;
-    		@include opacity(0.5);
-    	}
+        li {
+            i {
+                margin-right: 5px;
+                @include opacity(0.5);
+            }
+        }
     }
-  }
 }

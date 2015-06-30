@@ -1,43 +1,43 @@
 
 body {
-  background-color: $background-color !important;
-  color: $color;
-  padding-top: 100px;
-  line-height: 2;
+    background-color: $background-color !important;
+    color: $color;
+    padding-top: 100px;
+    line-height: 2;
 }
 
 a,
 .navbar .navbar-nav > li > a {
-  color: $color;
-  @include transition(color 0.4s);
+    color: $color;
+    @include transition(color 0.4s);
 }
 
 a:hover,
 .navbar .navbar-nav > li a:hover {
-  color: $active-color;
+    color: $active-color;
 }
 
 .navbar {
-  background: #fff;
-  padding: 10px;
-  @include opacity(0.9);
+    background: #fff;
+    padding: 10px;
+    @include opacity(0.9);
 }
 
 .navbar-brand {
-  margin-top: -10px;
+    margin-top: -10px;
 }
 
 .navbar-brand small {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .search {
-  width: 200px;
-  padding: 0 5px 0 5px;
+    width: 200px;
+    padding: 0 5px 0 5px;
 
-  .form-control:focus,
-  .form-control:active {
-      outline: none !important;
-      box-shadow: none !important;
+    .form-control:focus,
+    .form-control:active {
+        outline: none !important;
+        box-shadow: none !important;
     }
 }

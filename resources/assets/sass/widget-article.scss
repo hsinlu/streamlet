@@ -1,53 +1,53 @@
 .widget-article {
-  padding: 20px 40px 20px 40px;
+    padding: 20px 40px 20px 40px;
 }
 
 .article {
-  .article-header {
-    .article-meta > a {
-      margin-right: 20px;
-    }
-  }
-
-  .article-thumbnail {
-    padding: 40px 0 10px 0;
-      
-    img {
-      width: 100%;
-      @include scale(1);
-      @include transition(all 1s);
-
-      &:hover {
-        @include scale(1.05);
-      }
-    }
-  }
-
-  .article-content {
-    padding: 20px 0 20px 0;
-    border-bottom: solid 1px #e8e8e8;
-  }
-
-  .article-actions {
-    margin-bottom: 50px;
-
-    > .read-more {
-      border-top: solid 1px $active-color;
-      margin-top: -1px;
-      padding: 10px 0 10px 0;
+    .article-header {
+        .article-meta > a {
+            margin-right: 20px;
+        }
     }
 
-    .share {
-      padding: 10px 0 10px 0;
-      margin-right: 30px;
+    .article-thumbnail {
+        padding: 40px 0 10px 0;
 
-      > span {
-        margin-right: 10px;
-      }
+        img {
+            width: 100%;
+            @include scale(1);
+            @include transition(all 1s);
 
-      a {
-        margin-right: 3px;
-      }
+            &:hover {
+                @include scale(1.05);
+            }
+        }
     }
-  }
+
+    .article-content {
+        padding: 20px 0 20px 0;
+        border-bottom: solid 1px #e8e8e8;
+    }
+
+    .article-actions {
+        margin-bottom: 50px;
+
+        .read-more {
+            border-top: solid 1px $active-color;
+            margin-top: -1px;
+            padding: 10px 0 10px 0;
+        }
+
+        .share {
+            padding: 10px 0 10px 0;
+            margin-right: 30px;
+
+            span {
+                margin-right: 10px;
+            }
+
+            a {
+                margin-right: 3px;
+            }
+        }
+    }
 }

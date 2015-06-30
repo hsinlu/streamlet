@@ -124,14 +124,14 @@ footer {
 
 .article .article-actions {
   margin-bottom: 50px; }
-  .article .article-actions > .read-more {
+  .article .article-actions .read-more {
     border-top: solid 1px #ff0a60;
     margin-top: -1px;
     padding: 10px 0 10px 0; }
   .article .article-actions .share {
     padding: 10px 0 10px 0;
     margin-right: 30px; }
-    .article .article-actions .share > span {
+    .article .article-actions .share span {
       margin-right: 10px; }
     .article .article-actions .share a {
       margin-right: 3px; }
