@@ -76,9 +76,10 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create')
-                ->withCategories(Category::select('id', 'name')->get())
-                ->withTags(Tag::select('id', 'name')->get());
+        return view('articles.create', [
+            'categories' => Category::select('id', 'name')->get(),
+            'tags' => Tag::select('id', 'name')->get(),
+        ]);
     }
 
     /**
@@ -110,7 +111,7 @@ class ArticlesController extends Controller
         $article->public = $request->has('public') ? 1 : 0;
         $article->published_at = Carbon::now();
         $article->save();
-        $article->tags()->attach($tagids);
+        $article->tags()->sync($tagids);
 
         return redirect('articles/hub');
     }
@@ -161,7 +162,7 @@ class ArticlesController extends Controller
         $article->public = $request->has('public') ? 1 : 0;
         $article->published_at = Carbon::now();
         $article->update();
-        $article->tags()->attach($tagids);
+        $article->tags()->sync($tagids);
 
         return redirect('articles/hub');
     }
