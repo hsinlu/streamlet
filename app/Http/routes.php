@@ -24,7 +24,7 @@ Route::group(['prefix' => 'projects'], function () {
     Route::get('/', 'ProjectsController@index');
 });
 
-Route::get('search/{words}', 'SearchController@index');
+Route::get('search', 'SearchController@index');
 
 Route::get('setup', 'SetupController@setup');
 Route::post('setup', 'SetupController@store');

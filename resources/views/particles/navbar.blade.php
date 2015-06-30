@@ -48,9 +48,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <div class="search">
-                            <form class="form-inline">
+                            <form action="{{ url('search') }}" class="form-inline">
                                 <div class="input-group">
-                                    <input name="search" type="text" class="form-control" placeholder="{{ trans('strings.tips.input_search_words') }}">
+                                    <input name="words" type="text" class="form-control" placeholder="{{ trans('strings.tips.input_search_words') }}">
                                     <span class="input-group-btn">
                                         <button type="submit" class="btn btn-default pull-right">
                                             <i class="fa fa-search"></i>
