@@ -112,7 +112,7 @@ class ArticlesController extends Controller
         $article->save();
         $article->tags()->attach($tagids);
 
-        return redirect('hub');
+        return redirect('articles/hub');
     }
 
     /**
@@ -163,7 +163,7 @@ class ArticlesController extends Controller
         $article->update();
         $article->tags()->attach($tagids);
 
-        return redirect('hub');
+        return redirect('articles/hub');
     }
 
     /**
@@ -175,6 +175,6 @@ class ArticlesController extends Controller
     public function destroy($slug)
     {
         Article::where('slug', $slug)->delete();
-        return redirect('hub');
+        return redirect('articles/hub');
     }
 }
