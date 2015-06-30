@@ -30,7 +30,7 @@
 		position: absolute;
 		right: 0;
 		margin: 0;
-		.opacity(0);
+		@include opacity(0);
 	}
 }
 

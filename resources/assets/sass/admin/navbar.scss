@@ -1,18 +1,18 @@
-@navbar-background-color: #242628;
-@navbar-height: 60px;
-@navbar-color: fadeout(#000000, 30%);
+$navbar-background-color: #242628;
+$navbar-height: 60px;
+$navbar-color: fade-out(#000000, .3);
 
 .navbar {
 	border-radius: 0px;
 	margin-bottom: 0px;
-	color: @navbar-color;
-	height: @navbar-height;
+	color: $navbar-color;
+	height: $navbar-height;
 
 	.navbar-header {
-		height: @navbar-height;
+		height: $navbar-height;
 
 		.navbar-brand {
-			height: @navbar-height;
+			height: $navbar-height;
 			padding: 20px 15px;
 		}
 
@@ -22,8 +22,8 @@
 	}
 
 	.navbar-collapse {
-		background: @navbar-background-color;
-		height: @navbar-height;
+		background: $navbar-background-color;
+		height: $navbar-height;
 	}
 
 	.nav {
@@ -57,7 +57,7 @@
 							height: 100%;
 							display: block;
 							border-radius: 3px;
-							background: fadeout(#000000,80%);
+							background: fade-out(#000000, .8);
 						}
 					}
 				}

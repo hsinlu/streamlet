@@ -1,12 +1,12 @@
-@import "../mixins.less";
+@import "../mixins.scss";
 
-@import "variables.less";
+@import "variables.scss";
 
-@import "errors.less";
+@import "errors.scss";
 
 body {
-	background: @background-inverse-color;
-	color: @color;
+	background: $background-inverse-color;
+	color: $color;
 }
 
 .container-fuild {
@@ -29,16 +29,16 @@ body {
 		vertical-align: middle;
 
 		input {
-			background: @input-background-color;
+			background: $input-background-color;
 			padding-left: 35px;
 
 			&:focus {
-				background: @input-focus-background-color;
+				background: $input-focus-background-color;
 			}
 		}
 
 		.form-control {
-			color: @color;
+			color: $color;
 			height: 100%;
 			border: none !important;
 		}
@@ -91,7 +91,7 @@ body {
 
 		div.remember-me {
 			margin-top: 10px;
-			.opacity(0.6);
+			@include opacity(0.6);
 
 			input[type="checkbox"] {
 				margin-right: 5px;
@@ -110,7 +110,7 @@ body {
 			}
 
 			a {
-				color: @color;
+				color: $color;
 			}
 		}
 	}

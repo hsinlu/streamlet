@@ -1,12 +1,12 @@
-@import "../mixins.less";
+@import "../mixins.scss";
 
-@import "variables.less";
+@import "variables.scss";
 
-@import "errors.less";
+@import "errors.scss";
 
 body {
-	background: @background-inverse-color;
-	color: @color;
+	background: $background-inverse-color;
+	color: $color;
 }
 
 .container-fuild {
@@ -18,7 +18,7 @@ body {
 }
 
 .setup-box {
-	background: fadeout(lightgray, 70%);
+	background: fade-out(lightgray, .7);
 	display: table;
 	height: 90%;
 	padding: 20px;
@@ -35,15 +35,15 @@ body {
 
 		input,
 		textarea {
-			background: @input-background-color;
+			background: $input-background-color;
 
 			&:focus {
-				background: @input-focus-background-color;
+				background: $input-focus-background-color;
 			}
 		}
 
 		.form-control {
-			color: @color;
+			color: $color;
 			height: 100%;
 			border: none !important;			
 			width: 300px;

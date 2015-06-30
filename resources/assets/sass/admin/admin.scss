@@ -1,16 +1,16 @@
 // variables
-@import "variables.less";
+@import "variables.scss";
 
-@import "../mixins.less";
+@import "../mixins.scss";
 
-@import "article-edit.less";
-@import "hub.less";
+@import "article-edit.scss";
+@import "hub.scss";
 
-@import "errors.less";
-@import "navbar.less";
+@import "errors.scss";
+@import "navbar.scss";
 
 body {
-	background-color: @background-color !important;
+	background-color: $background-color !important;
   	padding-top: 75px;
 }
 

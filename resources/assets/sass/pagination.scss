@@ -4,14 +4,14 @@
 
 .pagination li > a,
 .pagination li > span {
-  color: @color;
+  color: $color;
   background-color: transparent;
   border: 0;
   margin: 0;
 }
 
 .pagination li > a:hover {
-  background-color: @background-color;
+  background-color: $background-color;
 }
 
 .pagination > .active > span,
@@ -20,6 +20,6 @@
 .pagination > .active > a,
 .pagination > .active > a:focus,
 .pagination > .active > a:hover {
-  background-color: @active-color;
-  border-color: @active-color;
+  background-color: $active-color;
+  border-color: $active-color;
 }

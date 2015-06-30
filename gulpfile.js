@@ -27,8 +27,8 @@ elixir(function(mix) {
     // vue
     mix.copy('bower_components/vue/dist/vue.min.js', 'public/js');
 
-    mix.less('streamlet.less');
-    mix.less('admin/login.less');
-    mix.less('admin/setup.less');
-    mix.less('admin/admin.less');
+    mix.sass('streamlet.scss');
+    mix.sass('admin/login.scss');
+    mix.sass('admin/setup.scss');
+    mix.sass('admin/admin.scss');
 });
