@@ -148,4 +148,20 @@ footer {
       -moz-opacity: 0.5;
       opacity: 0.5; }
 
+.toolbar-right-bottom {
+  position: fixed;
+  right: 20px;
+  bottom: 20px; }
+  .toolbar-right-bottom .scroll-to-top {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    background: #000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none; }
+    .toolbar-right-bottom .scroll-to-top:hover {
+      color: #ff0a60; }
+
 /*# sourceMappingURL=streamlet.css.map */

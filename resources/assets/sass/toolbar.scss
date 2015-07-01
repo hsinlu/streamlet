@@ -1,0 +1,25 @@
+.toolbar {
+
+
+}
+
+.toolbar-right-bottom {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	
+	.scroll-to-top {
+		text-align: center;
+		color: fade-out(#fff, .2);
+		background: #000;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		border-radius: 2px;
+		display: none;
+
+		&:hover {
+			color: $active-color;
+		}
+	}
+}

@@ -68,7 +68,13 @@
         </div>
     </div>
 </footer>
+<div class="toolbar toolbar-right-bottom">
+    <div class="scroll-to-top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+</div>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/streamlet.js') }}"></script>
 </body>
 </html>

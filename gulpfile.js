@@ -31,4 +31,8 @@ elixir(function(mix) {
     mix.sass('admin/login.scss');
     mix.sass('admin/setup.scss');
     mix.sass('admin/admin.scss');
+
+    mix.scripts([
+        'plugins.js'
+    ], 'public/js/streamlet.js');
 });
