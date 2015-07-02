@@ -1,11 +1,21 @@
 .hub {
-	padding: 10px;
-	margin: 0px;
+	position: absolute;
+	top: $navbar-height;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	background: #fff;
 
 	.hub-list {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		padding: 10px;
+		width: 33%;
+		overflow: auto;
 
-		.list-group-item {
+		a.list-group-item {
 			p {
 				margin-top: 20px;
 			}
@@ -13,12 +23,24 @@
 	}
 
 	.hub-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		padding: 10px;
+		width: 67%;
+		overflow: auto;
+
 		h2 {
 			margin: 15px 0;
 		}
 
 		.action-bar {
 			display: inline;
+		}
+
+		.panel-body {
+			padding: 30px;
 		}
 	}
 }

@@ -29,15 +29,36 @@
   border: 0; }
 
 .hub {
-  padding: 10px;
-  margin: 0px;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #fff; }
-  .hub .hub-list .list-group-item p {
-    margin-top: 20px; }
-  .hub .hub-content h2 {
-    margin: 15px 0; }
-  .hub .hub-content .action-bar {
-    display: inline; }
+  .hub .hub-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    width: 33%;
+    overflow: auto; }
+    .hub .hub-list a.list-group-item p {
+      margin-top: 20px; }
+  .hub .hub-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    width: 67%;
+    overflow: auto; }
+    .hub .hub-content h2 {
+      margin: 15px 0; }
+    .hub .hub-content .action-bar {
+      display: inline; }
+    .hub .hub-content .panel-body {
+      padding: 30px; }
 
 .errors {
   position: absolute;
@@ -58,10 +79,11 @@
     .navbar .navbar-header .navbar-toggle {
       margin-top: 15px; }
   .navbar .navbar-collapse {
-    background: #242628;
-    height: 60px; }
+    background: #242628; }
   .navbar .nav {
-    margin: 14px 10px; }
+    margin: 14px 10px;
+    font-size: 13px;
+    font-weight: 200; }
     .navbar .nav li {
       margin-right: 8px; }
       .navbar .nav li > a {
