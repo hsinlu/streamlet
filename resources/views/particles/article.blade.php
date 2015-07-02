@@ -22,12 +22,16 @@
             </div>
         </div>
     </header>
-    <div class="article-thumbnail">
-        <a href="{{ url('/articles/' . $article->slug) }}">
-            <img src="{{ asset('images/the-inside-secrets-of-millionaires-under-the-age-of-29.jpg') }}"
-                 alt="{{ $article->title }}"/>
-        </a>
-    </div>
+
+    @if(isset($article->image))
+        <div class="article-thumbnail">
+            <a href="{{ url('/articles/' . $article->slug) }}">
+                <img src="{{ $article->image }}"
+                     alt="{{ $article->title }}"/>
+            </a>
+        </div>
+    @endif
+
     <div class="article-content">
         <p>
             {!! $bio ? str_limit(strip_tags($article->body, 500)) : $article->body !!}
