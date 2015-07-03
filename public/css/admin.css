@@ -105,7 +105,8 @@
 
 body {
   background-color: #fff !important;
-  padding-top: 75px; }
+  padding-top: 75px;
+  font-weight: 300; }
 
 textarea {
   resize: none; }

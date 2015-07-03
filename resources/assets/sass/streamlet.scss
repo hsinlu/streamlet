@@ -1,15 +1,17 @@
 // variables
-@import "variables.scss";
+@import "variables";
 
-@import "mixins.scss";
+@import "mixins";
 
-@import "normal.scss";
-@import "pagination.scss";
-@import "footer.scss";
-@import "widget.scss";
-@import "widget-profile.scss";
-@import "widget-categories.scss";
-@import "widget-tags.scss";
-@import "widget-article.scss";
-@import "widget-recent.scss";
-@import "toolbar.scss";
+@import "animations";
+
+@import "normal";
+@import "pagination";
+@import "footer";
+@import "widget";
+@import "widget-profile";
+@import "widget-categories";
+@import "widget-tags";
+@import "widget-article";
+@import "widget-recent";
+@import "toolbar";

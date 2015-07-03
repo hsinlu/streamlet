@@ -24,7 +24,7 @@
     </header>
 
     @if(isset($article->image))
-        <div class="article-thumbnail">
+        <div class="article-thumbnail reveal-on-scroll" data-animation="fadeInUp 1.5s">
             <a href="{{ url('/articles/' . $article->slug) }}">
                 <img src="{{ $article->image }}"
                      alt="{{ $article->title }}"/>

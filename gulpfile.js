@@ -33,6 +33,8 @@ elixir(function(mix) {
     mix.sass('admin/admin.scss');
 
     mix.scripts([
-        'plugins.js'
+        'plugins/scroll-to-top.js',
+        'plugins/toggle-visibility-navbar.js',
+        'plugins/reveal-on-scroll.js'
     ], 'public/js/streamlet.js');
 });
