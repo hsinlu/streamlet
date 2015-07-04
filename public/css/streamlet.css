@@ -177,13 +177,14 @@ footer {
   .toolbar-right-bottom .scroll-to-top {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-    background: #000;
+    background: rgba(0, 0, 0, 0.5);
     width: 30px;
     height: 30px;
     cursor: pointer;
     border-radius: 2px;
     display: none; }
     .toolbar-right-bottom .scroll-to-top:hover {
+      background: #000;
       color: #ff0a60; }
 
 /*# sourceMappingURL=streamlet.css.map */

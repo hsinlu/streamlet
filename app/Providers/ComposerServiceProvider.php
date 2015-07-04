@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
 use App\Category;
 use App\Tag;
 use App\Article;
@@ -16,13 +17,20 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Using Closure based composers...
         view()->composer('widgets.categories', function ($view) {
-            $view->with('categories', Category::select('name', 'slug')->get());
+            $view->with('categories', DB::table('categories')
+                                        ->leftJoin('articles', 'categories.id', '=', 'articles.category_id')
+                                        ->select('categories.name', 'categories.slug', DB::raw('(case when `articles`.`category_id` is null then 0 else count(*) end) as `articles_count`'))
+                                        ->groupBy('categories.id')
+                                        ->get());
         });
 
         view()->composer('widgets.tags', function ($view) {
-            $view->with('tags', Tag::select('name', 'slug')->get());
+            $view->with('tags', DB::table('tags')
+                                    ->leftJoin('article_tag', 'tags.id', '=', 'article_tag.tag_id')
+                                    ->select('tags.name', 'tags.slug', DB::raw('(case when `article_tag`.`tag_id` is null then 0 else count(*) end) as `articles_count`'))
+                                    ->groupBy('tags.id')
+                                    ->get());
         });
 
         view()->composer('widgets.recent', function ($view) {

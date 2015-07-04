@@ -92,14 +92,14 @@ class ArticlesController extends Controller
         // find or create category
         $category = Category::firstOrCreate([
             'name' => e($request->input('category')), 
-            'slug' => e(str_slug($request->input('category'))),
+            'slug' => e(str_slug(pinyin($request->input('category')))),
             'user_id' => $auth->user()->id,
         ]);
         // find or create tags
         foreach ($request->input('tags') as $tag) {
             $tagids[] = Tag::firstOrCreate([
                             'name' => e($tag), 
-                            'slug' => e(str_slug($tag)),
+                            'slug' => e(str_slug(pinyin($tag))),
                             'user_id' => $auth->user()->id,
                         ])->id;
         }
@@ -142,14 +142,14 @@ class ArticlesController extends Controller
         // find or create category
         $category = Category::firstOrCreate([
             'name' => e($request->input('category')), 
-            'slug' => e(str_slug($request->input('category'))),
+            'slug' => e(str_slug(pinyin($request->input('category')))),
             'user_id' => $auth->user()->id,
         ]);
         // find or create tags
         foreach ($request->input('tags') as $tag) {
             $tagids[] = Tag::firstOrCreate([
                             'name' => e($tag), 
-                            'slug' => e(str_slug($tag)),
+                            'slug' => e(str_slug(pinyin($tag))),
                             'user_id' => $auth->user()->id,
                         ])->id;
         }

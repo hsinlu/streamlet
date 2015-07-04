@@ -10,6 +10,7 @@
             <i class="fa fa-angle-right"></i>
             <a href="{{ url('categories/' . $category->slug) }}">   
                 {{ $category->name }}
+                <span class="badge">{{ $category->articles_count }}</span>
             </a>
         </li>
         @endforeach
