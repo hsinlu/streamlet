@@ -10,30 +10,6 @@
 	}
 }
 
-.image-uploader {
-	border: 3px dashed #edece4;
-	text-align: center;
-	overflow: hidden;
-	margin: 0 0;
-	padding: 55px 60px;
-
-	.media {
-		&:before {
-			font-size: 60px;
-			font-family: 'FontAwesome';
-			color: #e7e6db;
-			content: '\f03e';
-		}
-	}
-
-	input[type="file"] {
-		position: absolute;
-		right: 0;
-		margin: 0;
-		@include opacity(0);
-	}
-}
-
 .cke_bottom {
 	border: 0;
 }

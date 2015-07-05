@@ -1,0 +1,44 @@
+.image-uploader {
+	border: 3px dashed #edece4;
+	text-align: center;
+	overflow: hidden;
+	margin: 0 0;
+	padding: 50px 60px;
+
+	.media {
+		&:before {
+			font-size: 60px;
+			font-family: 'FontAwesome';
+			color: #e7e6db;
+			content: '\f03e';
+		}
+	}
+
+	img {
+		cursor: pointer;
+		width: 275px;
+		height: 200px;
+		position: absolute;
+		top: 5px;
+		bottom: 5px;
+		left: 20px;
+		right: 5px;
+		@include opacity(0);
+		@include transition(all 1s);
+	}
+
+	input[type="file"] {
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		margin: 0;
+		@include opacity(0);
+	}
+
+	.close {
+		display: none;
+		position: absolute;
+		top: 5px;
+		left: 25px;
+	}
+}

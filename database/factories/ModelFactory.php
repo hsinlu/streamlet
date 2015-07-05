@@ -49,7 +49,7 @@ $factory->define(App\Article::class, function ($faker) {
         'title' => $title,
         'slug' => str_slug($title),
         'body' => $body,
-        'image' => $faker->imageUrl($width = 670, $height = 370),
+        'cover' => $faker->imageUrl($width = 670, $height = 370),
         'meta_title' => $faker->title,
         'meta_description' => $faker->title,
         'click' => $faker->numberBetween($min = 1000, $max = 9000),

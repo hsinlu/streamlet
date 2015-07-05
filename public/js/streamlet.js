@@ -50,10 +50,8 @@
 		});
 	};
 
-	$(function() {
-		$(document).scroll(revealOnScroll);
-		revealOnScroll();
-	});
+	$(document).scroll(revealOnScroll);
+	revealOnScroll();
 })(window.jQuery);
 /**
  * auto close alerts

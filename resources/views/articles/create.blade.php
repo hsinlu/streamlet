@@ -7,7 +7,7 @@
 @section('content')
 @include('particles.errors', ['errors' => $errors])
 <div class="article-edit">
-<form id="article-form" method="POST" action="{{ url('articles/store') }}">
+<form id="article-form" method="POST" action="{{ url('articles/store') }}" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="row">
@@ -22,15 +22,13 @@
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <section id="ember1114" class="ember-view image-uploader js-post-image-upload">
-                    <span class="media">
-                        <span class="hidden">Image Upload</span>
-                    </span>
-                    <img class="js-upload-target" src="" style="display: none;">
-                    <div class="description">Add post image<strong></strong></div>
-                    <input data-url="upload" class="js-fileupload main fileupload" type="file" name="uploadimage">
-                    <div class="js-fail failed" style="display: none">Something went wrong :(</div><button class="js-fail btn btn-green" style="display: none">Try Again</button><a class="image-url" title="Add image from URL"><span class="hidden">URL</span></a>
-                </section>
+                <div class="image-uploader">
+                    <span class="media"></span>
+                    <img >
+                    <div class="description">{{ trans('strings.admin.article_edit.cover')}}</div>
+                    <input type="file" name="cover">
+                    <button type="button" class="close"><span>&times;</span></button>
+                </div>
             </div>
 
             <div class="form-group">
@@ -90,6 +88,7 @@
 @endsection
 
 @section('scripts')
+    <script src="{{ asset('js/image-uploader.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/config.js') }}"></script>
     <script src="{{ asset('js/select2.min.js') }}"></script>

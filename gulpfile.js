@@ -42,4 +42,8 @@ elixir(function(mix) {
     mix.scripts([
         'plugins/auto-close-alerts.js'
     ], 'public/js/streamlet-admin.js');
+
+    mix.scripts([
+        'image-uploader.js'
+    ], 'public/js/image-uploader.js');
 });

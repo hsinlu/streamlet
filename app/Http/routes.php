@@ -30,7 +30,6 @@ Route::get('setup', 'SetupController@setup');
 Route::post('setup', 'SetupController@store');
 
 // images
-Route::get('images/{filename}', 'ImagesController@index');
 Route::post('images/upload', 'ImagesController@upload');
 Route::post('images/ckupload', 'ImagesController@ck_upload');
 

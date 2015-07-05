@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->string('title', 150);
             $table->string('slug')->unique();
             $table->text('body');
-            $table->text('image');
+            $table->text('cover');
             $table->string('meta_title', 150);
             $table->string('meta_description');
             $table->integer('click')->default(0);

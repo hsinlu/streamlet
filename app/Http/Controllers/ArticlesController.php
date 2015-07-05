@@ -106,6 +106,7 @@ class ArticlesController extends Controller
         // create article
         $article = with(new Article)->fill($request->all());
         $article->slug = empty($article->slug) ? str_slug(pinyin($article->title)) : $article->slug;
+        $article->cover = $this->saveCover($request, $article->slug);
         $article->user_id = $auth->user()->id;
         $article->category_id = $category->id;
         $article->public = $request->has('public') ? 1 : 0;
@@ -159,6 +160,7 @@ class ArticlesController extends Controller
         $article = Article::where('slug', $slug)->firstOrFail();
         $article->fill($request->all());
         $article->slug = empty($article->slug) ? str_slug(pinyin($article->title)) : $article->slug;
+        $article->cover = $this->saveCover($request, $article);
         $article->user_id = $auth->user()->id;
         $article->category_id = $category->id;
         $article->public = $request->has('public') ? 1 : 0;
@@ -184,5 +186,23 @@ class ArticlesController extends Controller
         flash()->success(trans('flash_messages.article_delete_success'));
 
         return redirect('articles/hub');
+    }
+
+    protected function saveCover(ArticleRequest $request, $article)
+    {
+        if (!$request->hasfile('cover')) {
+            return $article->cover;
+        }
+        
+        $file = $request->file('cover');
+
+        if (!$file->isValid()) {
+            throw new Exception(trans('validation.image_not_invalid'));
+        }
+
+        $filename = $article->slug . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images/covers'), $filename);
+
+        return url('images/covers/' . $filename);
     }
 }

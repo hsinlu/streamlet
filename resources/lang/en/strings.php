@@ -27,6 +27,7 @@ return [
 		'article_edit' => [
 			'title_placeholder' => 'What you want...',
 			'body_placeholder' => 'Write something...',
+			'cover' => 'Add cover image',
 			'article_url' => 'Article Url',
 			'article_category' => 'Article Category',
 			'article_tags' => 'Article Tags',
