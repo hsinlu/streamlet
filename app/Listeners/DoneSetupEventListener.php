@@ -27,7 +27,7 @@ class DoneSetupEventListener
      */
     public function handle(DoneSetupEvent $event)
     {
-        file_put_contents(storage_path('/steup.lock'), 'done');
+        file_put_contents(storage_path('app/steup.lock'), 'done');
         Cache::forget('settings');
     }
 }
