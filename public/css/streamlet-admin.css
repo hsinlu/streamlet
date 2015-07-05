@@ -60,8 +60,8 @@
     .hub .hub-content .panel-body {
       padding: 30px; }
 
-.errors {
-  position: absolute;
+.alerts-panel {
+  position: fixed;
   left: 10px;
   bottom: 0px;
   z-index: 999; }
@@ -121,4 +121,4 @@ textarea {
     outline: 0;
     border: 0px; }
 
-/*# sourceMappingURL=admin.css.map */
+/*# sourceMappingURL=streamlet-admin.css.map */

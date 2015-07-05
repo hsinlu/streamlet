@@ -30,11 +30,16 @@ elixir(function(mix) {
     mix.sass('streamlet.scss');
     mix.sass('admin/login.scss');
     mix.sass('admin/setup.scss');
-    mix.sass('admin/admin.scss');
+    mix.sass('admin/streamlet-admin.scss');
 
     mix.scripts([
         'plugins/scroll-to-top.js',
         'plugins/toggle-visibility-navbar.js',
-        'plugins/reveal-on-scroll.js'
+        'plugins/reveal-on-scroll.js',
+        'plugins/auto-close-alerts.js'
     ], 'public/js/streamlet.js');
+
+    mix.scripts([
+        'plugins/auto-close-alerts.js'
+    ], 'public/js/streamlet-admin.js');
 });

@@ -10,10 +10,11 @@
     <meta name="keywords" content="{{ setting_value($settings, 'keywords') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/streamlet-admin.css') }}">
     @yield('header')
 </head>
 <body>
+@include('flash::message')
 <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="banner">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -64,6 +65,7 @@
 </div>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/streamlet-admin.js') }}"></script>
 @yield('scripts')
 </body>
 </html>
