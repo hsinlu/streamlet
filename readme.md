@@ -55,8 +55,9 @@ php artisan db:seed --class=FakerDataSeeder
 ```bash
 php artisan db:seed --class=SettingTableSeeder
 ```
-> 您也可以不用执行此步骤，因为在项目第一次访问时会要求配置此想内容
+> 您也可以不用执行此步骤，因为在项目第一次访问时会要求配置此项内容
 
+默认用户： ['hsinlu@live.com' => '123456']  
 
 ## License
 The MIT License (MIT)
