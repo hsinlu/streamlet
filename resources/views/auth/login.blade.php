@@ -20,8 +20,8 @@
     <![endif]-->
 </head>
 <body>
+@include('particles.errors', ['errors' => $errors])
 <div class="container-fuild">
-    @include('particles.errors', ['errors' => $errors])
     <div class="login-box">
         <form class="form-inline" method="POST" action="{{ url('/auth/login') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">

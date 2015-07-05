@@ -1,8 +1,8 @@
-@import "../mixins.scss";
+@import "../mixins";
 
-@import "variables.scss";
+@import "variables";
 
-@import "errors.scss";
+@import "../alerts-panel";
 
 body {
 	background: $background-inverse-color;

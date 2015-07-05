@@ -113,6 +113,8 @@ class ArticlesController extends Controller
         $article->save();
         $article->tags()->sync($tagids);
 
+        flash()->success(trans('flash_messages.article_create_success'));
+
         return redirect('articles/hub');
     }
 
@@ -164,6 +166,8 @@ class ArticlesController extends Controller
         $article->update();
         $article->tags()->sync($tagids);
 
+        flash()->success(trans('flash_messages.article_update_success'));
+
         return redirect('articles/hub');
     }
 
@@ -176,6 +180,9 @@ class ArticlesController extends Controller
     public function destroy($slug)
     {
         Article::where('slug', $slug)->delete();
+
+        flash()->success(trans('flash_messages.article_delete_success'));
+
         return redirect('articles/hub');
     }
 }

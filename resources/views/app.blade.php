@@ -20,6 +20,7 @@
     <![endif]-->
 </head>
 <body>
+@include('flash::message')
 <div class="navbar navbar-default navbar-fixed-top toggle-visibility-navbar" role="banner">
     <div class="container">
         <div class="navbar-header">

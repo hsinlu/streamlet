@@ -150,6 +150,7 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         Overtrue\LaravelPinyin\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
     ],
 
     /*

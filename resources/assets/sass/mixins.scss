@@ -1,8 +1,17 @@
-
+// opacity
+// Set element opacity
 @mixin opacity($opacity) {
 	filter: alpha(Opacity=$opacity);
   	-moz-opacity: $opacity;
   	opacity: $opacity;
+}
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
 }
 
 @mixin scale($scale) {
@@ -19,4 +28,12 @@
 	-ms-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
+}
+
+@mixin translate3d($x, $y, $z) {
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-ms-transition: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
 }

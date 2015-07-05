@@ -1,21 +1,37 @@
 @-webkit-keyframes fadeInUp {
   0% {
+    filter: alpha(Opacity=0);
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transition: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
   100% {
+    filter: alpha(Opacity=1);
+    -moz-opacity: 1;
     opacity: 1;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none; } }
 
 @keyframes fadeInUp {
   0% {
+    filter: alpha(Opacity=0);
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transition: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
   100% {
+    filter: alpha(Opacity=1);
+    -moz-opacity: 1;
     opacity: 1;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none; } }
 
 body {
@@ -186,5 +202,11 @@ footer {
     .toolbar-right-bottom .scroll-to-top:hover {
       background: #000;
       color: #ff0a60; }
+
+.alerts-panel {
+  position: fixed;
+  left: 10px;
+  bottom: 0px;
+  z-index: 999; }
 
 /*# sourceMappingURL=streamlet.css.map */

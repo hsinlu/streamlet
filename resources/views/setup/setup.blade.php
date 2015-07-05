@@ -18,8 +18,8 @@
     <![endif]-->
 </head>
 <body>
+@include('particles.errors', ['errors' => $errors])
 <div class="container-fuild">
-    @include('particles.errors', ['errors' => $errors])
     <div class="setup-box">
         <form method="POST" action="{{ url('setup') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
