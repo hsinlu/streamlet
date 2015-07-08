@@ -7,6 +7,8 @@ class SettingTableSeeder extends Seeder
 {
     public function run()
     {
+        Setting::truncate();
+
         Setting::create([
             'name' => 'name',
             'value' => 'Hsinlu Si',
@@ -16,9 +18,7 @@ class SettingTableSeeder extends Seeder
 
         Setting::create([
             'name' => 'bio',
-            'value' => '大家好，我是hsinlu，我是一名开发者。<br/>
-                        欢迎来到我的博客。<br/>
-                        我喜欢编码、写博客。',
+            'value' => '欢迎来到我的个人网站，在这里我会给你分享我的文章、项目和生活感悟，希望你能喜欢！',
             'description' => 'bio',
             'type' => 'text'
         ]);
