@@ -1,7 +1,7 @@
 <div class="widget widget-tags">
     <h4>
         <i class="fa fa-tags fa-2"></i>
-        {{ trans('strings.tag') }}
+        {{ trans('strings.widgets.tag_title') }}
     </h4>
     <hr/>
     <div>

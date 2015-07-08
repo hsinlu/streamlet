@@ -20,6 +20,7 @@
     "bootstrap": "~3.3.5",
     "fontawesome": "~4.3.0",
     "select2": "~4.0.0",
-    "vue": "~0.12.4"
+    "vue": "~0.12.4",
+    "jquery.qrcode": "~0.12.0"
   }
 }

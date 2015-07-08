@@ -1,7 +1,7 @@
 <div class="widget widget-recent">
     <h4>
         <i class="fa fa-fire fa-2"></i>
-        {{ trans('strings.recent') }}
+        {{ trans('strings.widgets.recent_title') }}
     </h4>
     <hr/>
     <ul>

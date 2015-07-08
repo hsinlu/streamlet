@@ -21,6 +21,8 @@ elixir(function(mix) {
     mix.copy('bower_components/fontawesome/fonts', 'public/fonts');
     // jquery
     mix.copy('bower_components/jquery/dist/jquery.min.js', 'public/js');
+    // jquery.qrcode
+    mix.copy('bower_components/jquery.qrcode/dist/jquery.qrcode.min.js', 'public/js');
     // select2
     mix.copy('bower_components/select2/dist/css/select2.min.css', 'public/css');
     mix.copy('bower_components/select2/dist/js/select2.min.js', 'public/js');
@@ -36,7 +38,8 @@ elixir(function(mix) {
         'plugins/scroll-to-top.js',
         'plugins/toggle-visibility-navbar.js',
         'plugins/reveal-on-scroll.js',
-        'plugins/auto-close-alerts.js'
+        'plugins/auto-close-alerts.js',
+        'plugins/qrcode.js'
     ], 'public/js/streamlet.js');
 
     mix.scripts([

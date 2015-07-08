@@ -109,6 +109,7 @@
                     </p>
                 </div>
             </div>
+            @include('widgets.qrcode')
             @include('widgets.categories')
             @include('widgets.tags')
             @include('widgets.recent')
@@ -142,6 +143,7 @@
 </div>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/jquery.qrcode.min.js') }}"></script>
 <script src="{{ asset('js/streamlet.js') }}"></script>
 </body>
 </html>

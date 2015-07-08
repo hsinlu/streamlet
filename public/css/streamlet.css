@@ -186,6 +186,12 @@ footer {
       -moz-opacity: 0.5;
       opacity: 0.5; }
 
+.widget-qrcode {
+  padding: 20px; }
+  .widget-qrcode .qrcode {
+    width: 200px;
+    height: 200px; }
+
 .toolbar-right-bottom {
   position: fixed;
   right: 20px;

@@ -4,9 +4,6 @@ return [
 	'home' => 'Home',
 	'articles' => 'Articles',
 	'projects' => 'Projects',
-	'category' => 'Category',
-	'tag' => 'Tag',
-	'recent' => 'Recent',
 	'setting' => 'Setting',
 	'login' => 'Login',
 	'logout' => 'Logout',
@@ -18,6 +15,13 @@ return [
 	'choose_tags' => 'Choose tags',
 	'edit' => 'Edit',
 	'delete' => 'Delete',
+
+	'widgets' => [
+		'categories_title' => 'Categories',
+		'tag_title' => 'Tag',
+		'recent_title' => 'Recent',
+		'qrcode_title' => 'See it in the phone',
+	],
 
 	'admin' => [
 		'navbar' => [

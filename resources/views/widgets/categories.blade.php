@@ -1,7 +1,7 @@
 <div class="widget widget-categories">
     <h4>
         <i class="fa fa-folder-o"></i>
-        {{ trans('strings.category') }}
+        {{ trans('strings.widgets.categories_title') }}
     </h4>
     <hr/>
     <ul>
