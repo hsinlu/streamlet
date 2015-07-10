@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers;
 
-    protected $redirectTo = 'articles/hub';
+    protected $redirectTo = 'admin/articles/hub';
 
     /**
      * Create a new authentication controller instance.

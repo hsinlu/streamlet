@@ -30,11 +30,11 @@
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
-                <li class="{{ is_pattern(['articles/hub', 'articles/hub/*']) ? 'active' : '' }}">
-                        <a href="{{ url('articles/hub/') }}"><i class="fa fa-list-alt"></i>Hub</a>
+                <li class="{{ is_pattern(['admin/articles/hub', 'admin/articles/hub/*']) ? 'active' : '' }}">
+                        <a href="{{ url('admin/articles/hub/') }}"><i class="fa fa-list-alt"></i>Hub</a>
                 </li>
-                <li class="{{ is_pattern(['articles/create', 'articles/create/*']) ? 'active' : '' }}">
-                    <a href="{{ url('articles/create') }}"><i class="fa fa-plus"></i>{{ trans('strings.admin.navbar.new_article') }}</a>
+                <li class="{{ is_pattern(['admin/articles/create', 'admin/articles/create/*']) ? 'active' : '' }}">
+                    <a href="{{ url('admin/articles/create') }}"><i class="fa fa-plus"></i>{{ trans('strings.admin.navbar.new_article') }}</a>
                 </li>
                 <li>
                     <a href="{{ url('setup') }}"><i class="fa fa-cog"></i>{{ trans('strings.admin.navbar.setting') }}</a>

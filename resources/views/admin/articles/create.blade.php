@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin.app')
 
 @section('header')
 <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
@@ -7,7 +7,7 @@
 @section('content')
 @include('particles.errors', ['errors' => $errors])
 <div class="article-edit">
-<form id="article-form" method="POST" action="{{ url('articles/store') }}" enctype="multipart/form-data">
+<form id="article-form" method="POST" action="{{ url('admin/articles/store') }}" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="row">
