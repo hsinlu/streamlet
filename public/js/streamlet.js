@@ -24,13 +24,20 @@
  * @return {[type]}   [description]
  */
 (function ($) {
-	$(function() { 
+	$(function() {
+		var previousScrollTop = 0;
+		var currentScrollTop = 0;
+
 		$(document).scroll(function () {
-			if ($(document).scrollTop() > 50) {
-				$(".toggle-visibility-navbar").fadeOut();
+			currentScrollTop = $(document).scrollTop();
+
+			if (currentScrollTop > 50 && currentScrollTop > previousScrollTop) {
+				$(".toggle-visibility-navbar").slideUp();
 			} else {
-				$(".toggle-visibility-navbar").fadeIn();
+				$(".toggle-visibility-navbar").slideDown();
 			}
+
+			previousScrollTop = currentScrollTop;
 		});
 	});
 })(window.jQuery);
