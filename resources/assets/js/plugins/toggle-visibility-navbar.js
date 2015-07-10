@@ -12,9 +12,9 @@
 			currentScrollTop = $(document).scrollTop();
 
 			if (currentScrollTop > 50 && currentScrollTop > previousScrollTop) {
-				$(".toggle-visibility-navbar").slideUp();
+				$(".toggle-visibility-navbar").fadeOut();
 			} else {
-				$(".toggle-visibility-navbar").slideDown();
+				$(".toggle-visibility-navbar").fadeIn();
 			}
 
 			previousScrollTop = currentScrollTop;
