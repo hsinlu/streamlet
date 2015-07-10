@@ -17,6 +17,20 @@ class SettingTableSeeder extends Seeder
         ]);
 
         Setting::create([
+            'name' => 'profile_cover',
+            'value' => 'images/profile_cover.jpg',
+            'description' => 'your profile cover',
+            'type' => 'url'
+        ]);
+
+        Setting::create([
+            'name' => 'profile_logo',
+            'value' => 'images/profile_logo.png',
+            'description' => 'your profile logo',
+            'type' => 'url'
+        ]);
+
+        Setting::create([
             'name' => 'bio',
             'value' => '欢迎来到我的个人网站，在这里我会给你分享我的文章、项目和生活感悟，希望你能喜欢！',
             'description' => 'bio',

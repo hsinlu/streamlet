@@ -95,9 +95,9 @@
         </div>
         <div class="col-md-4">
             <div class="widget widget-profile">
-                <div class="cover">
+                <div class="cover" style="background: url('{{ asset(setting_value($settings, 'profile_cover')) }}') no-repeat 10% center;">
                     <div class="avatar">
-                        <img class="img-circle" src="{{ asset('images/logo.png') }}">
+                        <img class="img-circle" src="{{ asset(setting_value($settings, 'profile_logo')) }}">
                     </div>
                 </div>
                 <div class="bio">
