@@ -43,7 +43,10 @@ elixir(function(mix) {
     ], 'public/js/streamlet.js');
 
     mix.scripts([
-        'plugins/auto-close-alerts.js'
+        'admin/functions.js',
+        'admin/articles.js',
+        'admin/settings-profile.js'
+        'plugins/auto-close-alerts.js',
     ], 'public/js/streamlet-admin.js');
 
     mix.scripts([

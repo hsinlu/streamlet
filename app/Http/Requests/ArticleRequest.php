@@ -30,7 +30,7 @@ class ArticleRequest extends Request
             'category' => 'required|max:30',
         ];
 
-        if ($this->is('articles/update/*')) {
+        if ($this->is('admin/articles/update/*')) {
             $rules['slug'] = 'unique:articles,slug,' . $this->input('id');
         }
         

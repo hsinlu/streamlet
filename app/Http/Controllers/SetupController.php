@@ -22,8 +22,8 @@ class SetupController extends Controller
     	DB::delete('delete from settings');
     	DB::table('settings')->insert([
 			['name' => 'name', 'value' => e($request->input('name'))],
-            ['name' => 'profile_cover', 'value' => 'images/profile_cover.jpg'],
-            ['name' => 'profile_logo', 'value' => 'images/profile_logo.png'],
+            ['name' => 'cover', 'value' => 'images/cover.jpg'],
+            ['name' => 'avatar', 'value' => 'images/avatar.png'],
 			['name' => 'bio', 'value' => e($request->input('bio'))],
 			['name' => 'title', 'value' => e($request->input('title'))],
 			['name' => 'subtitle', 'value' => e($request->input('subtitle'))],

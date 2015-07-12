@@ -11,7 +11,10 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'articles' => Article::with('tags', 'category')->orderby('published_at', 'desc')->paginate(8),
+            'articles' => Article::with('tags', 'category')
+            				->public()
+            				->latest('published_at')
+            				->paginate(setting_value('paginate_size')),
         ]);
     }
 }

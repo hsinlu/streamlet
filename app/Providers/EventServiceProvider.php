@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         \App\Events\DoneSetupEvent::class => [
             \App\Listeners\DoneSetupEventListener::class,
         ],
+        \App\Events\SettingsChangedEvent::class => [
+            \App\Listeners\SettingsChangedEventListener::class,
+        ],
     ];
 
     /**

@@ -23,14 +23,25 @@ class ArticlesController extends Controller
      * @param  string $slug [description]
      * @return [type]       [description]
      */
-    public function hub($slug = '')
+    public function hub(Request $request, $slug = '')
     {
-        $articles = Article::orderby('published_at', 'desc')->paginate(8);
-        $article = Article::with('tags', 'category')->where('slug', empty($slug) ? $articles->first()->slug : $slug)->firstOrFail();
+        $words = '';
+
+        $articles = Article::latest('published_at');
+        // search some
+        if ($request->has('words')) {
+            $words = e($request->input('words'));
+            $articles->where('title', 'like', '%'. $words . '%');
+        }
+        $articles = $articles->paginate(8);
+        $article = Article::with('tags', 'category')
+                        ->where('slug', empty($slug) ? $articles->first()->slug : $slug)
+                        ->firstOrFail();
 
         return view('admin.articles.hub', [
             'articles' => $articles,
             'article' => $article,
+            'words' => $words,
         ]);
     }
 

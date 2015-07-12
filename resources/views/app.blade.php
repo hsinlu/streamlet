@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <title>{{ setting_value($settings, 'title') }}</title>
-    <meta name="description" content="{{ setting_value($settings, 'description') }}"/>
-    <meta name="keywords" content="{{ setting_value($settings, 'keywords') }}"/>
+    <title>{{ setting_value('title') }}</title>
+    <meta name="description" content="{{ setting_value('description') }}"/>
+    <meta name="keywords" content="{{ setting_value('keywords') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/streamlet.css') }}">
@@ -31,8 +31,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/" class="navbar-brand">
-                {{ setting_value($settings, 'title') }} <br/>
-                <small>{{ setting_value($settings, 'subtitle') }}</small>
+                {{ setting_value('title') }} <br/>
+                <small>{{ setting_value('subtitle') }}</small>
             </a>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
@@ -41,13 +41,13 @@
                     <a href="{{ url('/') }}">{{ trans('strings.home') }}</a>
                 </li>
                 <li>
-                    <a href="{{ url('/articles') }}">{{ trans('strings.articles') }}</a>
+                    <a href="{{ url('articles') }}">{{ trans('strings.articles') }}</a>
                 </li>
                 <li>
-                    <a href="{{ url('/knots') }}">Knots</a>
+                    <a href="{{ url('knots') }}">Knots</a>
                 </li>
                 <li>
-                    <a href="{{ url('/projects') }}">{{ trans('strings.projects') }}</a>
+                    <a href="{{ url('projects') }}">{{ trans('strings.projects') }}</a>
                 </li>
                 @if(Auth::check())
                     <li>
@@ -59,7 +59,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">{{ trans('strings.setting') }}</a></li>
+                            <li><a href="{{ url('admin/settings/profile') }}">{{ trans('strings.setting') }}</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{{ url('auth/logout') }}">{{ trans('strings.logout') }}</a></li>
                         </ul>
@@ -95,17 +95,17 @@
         </div>
         <div class="col-md-4">
             <div class="widget widget-profile">
-                <div class="cover" style="background: url('{{ asset(setting_value($settings, 'profile_cover')) }}') no-repeat 10% center;">
+                <div class="cover" style="background: url('{{ asset(setting_value('cover')) }}') no-repeat 10% center;">
                     <div class="avatar">
-                        <img class="img-circle" src="{{ asset(setting_value($settings, 'profile_logo')) }}">
+                        <img class="img-circle" src="{{ asset(setting_value('avatar')) }}">
                     </div>
                 </div>
                 <div class="bio">
                     <h4 class="text-center">
-                        <a href="{{ url('/') }}">{{ setting_value($settings, 'name') }}</a></h4>
+                        <a href="{{ url('/') }}">{{ setting_value('name') }}</a></h4>
                     <hr/>
                     <p class="text-center">
-                        {!! setting_value($settings, 'bio') !!}
+                        {!! setting_value('bio') !!}
                     </p>
                 </div>
             </div>

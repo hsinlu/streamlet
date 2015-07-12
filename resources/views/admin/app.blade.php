@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <title>{{ setting_value($settings, 'title') }}</title>
-    <meta name="description" content="{{ setting_value($settings, 'description') }}"/>
-    <meta name="keywords" content="{{ setting_value($settings, 'keywords') }}"/>
+    <title>{{ setting_value('title') }}</title>
+    <meta name="description" content="{{ setting_value('description') }}"/>
+    <meta name="keywords" content="{{ setting_value('keywords') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/streamlet-admin.css') }}">
@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/" class="navbar-brand">
-                {{ setting_value($settings, 'title') }}
+                {{ setting_value('title') }}
             </a>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
@@ -36,8 +36,8 @@
                 <li class="{{ is_pattern(['admin/articles/create', 'admin/articles/create/*']) ? 'active' : '' }}">
                     <a href="{{ url('admin/articles/create') }}"><i class="fa fa-plus"></i>{{ trans('strings.admin.navbar.new_article') }}</a>
                 </li>
-                <li>
-                    <a href="{{ url('setup') }}"><i class="fa fa-cog"></i>{{ trans('strings.admin.navbar.setting') }}</a>
+                <li class="{{ is_pattern(['admin/settings/*']) ? 'active' : '' }}">
+                    <a href="{{ url('admin/settings/general') }}"><i class="fa fa-cogs"></i>{{ trans('strings.admin.navbar.setting') }}</a>
                 </li>
             </ul>
 
@@ -61,6 +61,7 @@
     </div>
 </div>
 <div class="container-fluid">
+    @include('particles.errors', ['errors' => $errors])
     @yield('content')
 </div>
 <script src="{{ asset('js/jquery.min.js') }}"></script>

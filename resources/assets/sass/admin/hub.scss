@@ -6,18 +6,104 @@
 	right: 0;
 	background: #fff;
 
-	.hub-list {
+	.hub-nav {
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
-		padding: 10px;
-		width: 33%;
-		overflow: auto;
+		padding: 0;
+		width: 30%;
+		overflow: hidden;
+		border: solid $border-color 1px;
+		border-top-style: none;
+		border-left-style: none;
+		border-bottom-style: none;
 
-		a.list-group-item {
-			p {
-				margin-top: 20px;
+		.search {
+			position: absolute;
+			background: #fff;
+			top: 0;
+			left: 0;
+			right: 0;
+			padding: 10px 20px;
+			height: 55px;
+			z-index: 999;
+
+			.btn-add {
+				display: block;
+				height: 25px;
+				width: 25px;
+				background: #9FBB58;
+				border: solid #9FBB58 1px;
+				border-radius: 5px;
+				text-align: center;
+				color: #fff;
+
+				i {
+					vertical-align: middle;
+				}
+
+				&:hover {
+					// background: #000;
+					background: darken(#9FBB58, 10%);
+				}
+			}
+		}
+	
+		.list-group {
+			position: absolute;
+			top: 55px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: auto;
+
+			.list {
+			
+				a {
+					display: block;
+					text-decoration: none;
+					padding: 10px 25px;
+					border: solid $border-color 1px;
+					border-left-style: none;
+					border-right-style: none;
+					border-bottom-style: none;
+					color: fade-out($navbar-color, .3);
+
+					&:hover {
+						background: fade-out($border-color, .5);
+					}
+
+					&.active {
+						background: $border-color;
+						color: $navbar-color;
+					}
+
+					p {
+						margin-top: 20px;
+					}
+				}
+
+				a:last-child {
+					border-bottom-style: solid;
+				}
+			}
+
+			.pagination {
+				margin-left: 25px;
+				a {
+					color: #9FBB58;
+				}
+			}
+
+			.pagination > .active > span,
+			.pagination > .active > span:focus,
+			.pagination > .active > span:hover,
+			.pagination > .active > a,
+			.pagination > .active > a:focus,
+			.pagination > .active > a:hover {
+			    background-color: #9FBB58;
+			    border-color: #9FBB58;
 			}
 		}
 	}
@@ -28,7 +114,7 @@
 		bottom: 0;
 		right: 0;
 		padding: 10px;
-		width: 67%;
+		width: 70%;
 		overflow: auto;
 
 		h2 {

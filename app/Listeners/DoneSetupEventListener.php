@@ -2,10 +2,12 @@
 
 namespace App\Listeners;
 
-use App\Events\DoneSetupEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
+
+use App\Events\DoneSetupEvent;
+use App\Events\SettingsChangedEvent;
 
 class DoneSetupEventListener
 {
@@ -28,6 +30,6 @@ class DoneSetupEventListener
     public function handle(DoneSetupEvent $event)
     {
         file_put_contents(storage_path('app/steup.lock'), 'done');
-        Cache::forget('settings');
+        event(new SettingsChangedEvent);
     }
 }

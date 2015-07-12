@@ -1,0 +1,51 @@
+.settings-navbar {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	width: 25%;
+	overflow: auto;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		border: solid $border-color 1px;
+		border-top-style: none;
+		border-left-style: none;
+		border-bottom-style: none;
+
+		li {
+			background: #FFF;
+
+			&:hover {
+				background: $border-color;
+			}
+
+			a {
+				display: block;
+				padding: 20px 0 20px 50px;
+				text-decoration: none;
+				color: fade-out($navbar-color, .3);
+
+				i {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.active {
+			border: solid $border-color 1px;
+			border-left-style: none;
+			border-right-style: none;
+			margin-right: -1px;
+			font-weight: bold;
+
+			a {
+				color: $navbar-color;
+			}
+		}
+	}
+}

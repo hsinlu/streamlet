@@ -18,8 +18,8 @@ class TagsController extends Controller
         $articles = $tag->articles()
                         ->with('tags', 'category')
                         ->public()
-                        ->orderby('published_at', 'desc')
-                        ->paginate(8);
+                        ->latest('published_at')
+                        ->paginate(setting_value('paginate_size'));
         return view('tags.index', ['tag' => $tag, 'articles' => $articles]);
     }
 }

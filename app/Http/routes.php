@@ -4,12 +4,30 @@
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function() {
     // Articles routes
     Route::group(['prefix' => 'articles'], function() {
-        Route::get('hub/{slug?}', 'ArticlesController@hub');
+        Route::any('hub/{slug?}', ['as' => 'articles_hub', 'uses' => 'ArticlesController@hub']);
         Route::get('create', 'ArticlesController@create');
         Route::post('store', 'ArticlesController@store');
         Route::get('edit/{slug}', 'ArticlesController@edit');
         Route::post('update/{slug}', 'ArticlesController@update');
         Route::get('delete/{slug}', 'ArticlesController@destroy');
+    });
+
+    // Settings routes
+    Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function() {
+        Route::group(['prefix' => 'general'], function() {
+            Route::get('/', 'GeneralController@edit');
+            Route::post('/', 'GeneralController@update');
+        });
+        Route::group(['prefix' => 'profile'], function() {
+            Route::get('/', 'ProfileController@edit');
+            Route::post('/', 'ProfileController@update');
+        });
+        Route::group(['prefix' => 'categories'], function() {
+            Route::get('/', 'CategoriesController@index');
+        });
+        Route::group(['prefix' => 'tags'], function() {
+            Route::get('/', 'TagsController@index');
+        });
     });
 
     // Knots routes

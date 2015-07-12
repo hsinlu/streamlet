@@ -1,0 +1,23 @@
+.settings {
+	position: absolute;
+	top: $navbar-height;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+
+	@import "settings-navbar";
+
+	.settings-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		padding: 0 30px;
+		width: 75%;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		@import "settings-profile"
+	}
+}

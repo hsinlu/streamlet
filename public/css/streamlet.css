@@ -107,15 +107,14 @@ footer {
 .widget-profile .cover {
   background-size: cover;
   height: 110px; }
-
-.widget-profile .avatar img {
-  position: absolute;
-  top: 40px;
-  left: 20%;
-  margin-left: -47px;
-  width: 95px;
-  height: 95px;
-  border: solid 4px #FFF; }
+  .widget-profile .cover .avatar img {
+    position: relative;
+    top: 40px;
+    left: 20%;
+    margin-left: -47px;
+    width: 95px;
+    height: 95px;
+    border: solid 4px #FFF; }
 
 .widget-profile .bio {
   padding: 10px 20px 30px 20px; }

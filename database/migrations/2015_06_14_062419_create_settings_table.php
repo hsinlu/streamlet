@@ -17,7 +17,6 @@ class CreateSettingsTable extends Migration
             $table->string('name')->unique();
             $table->string('value', 1000)->nullable();
             $table->string('description', 500)->nullable();
-            $table->enum('type', ['text', 'textarea', 'select', 'checkbox', 'radio'])->default('text');
         });
     }
 

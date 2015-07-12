@@ -1,28 +1,32 @@
 <?php
 
+use App\Setting;
+
 /**
  * Get setting
  *
- * @param $settings
  * @param $name
  * @return mixed
  */
-function setting($settings, $name)
+function setting($name)
 {
+    $settings = Cache::rememberForever('settings', function () {
+        return Setting::select('name', 'value')->get();
+    });
+
     return $settings->where('name', $name)->first();
 }
 
 /**
  * Get setting value
  *
- * @param $settings
  * @param $name
  * @param $default
  * @return mixed
  */
-function setting_value($settings, $name, $default = '')
+function setting_value($name, $default = '')
 {
-    $setting = setting($settings, $name);
+    $setting = setting($name);
     if (!is_null($setting)) {
         return $setting->value;
     } else {

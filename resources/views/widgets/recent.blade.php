@@ -8,7 +8,7 @@
         @foreach($articles as $article)
         <li>
             <i class="fa fa-file-o"></i>
-            <a href="{{ url('articles/' . $article->slug) }}">   
+            <a href="{{ url('articles', [$article->slug]) }}">   
                 {{ $article->title }}
             </a>
         </li>

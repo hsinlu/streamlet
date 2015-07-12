@@ -1,0 +1,61 @@
+.profile {
+	
+	.cover {
+        background-size: cover;
+        height: 200px;
+        margin-bottom: 50px;
+
+		input[type="file"] {
+			display: none;
+		}
+
+       	.avatar {
+			position: relative;
+	        top: 130px;
+	        left: 53px;
+
+	        img, .mask {
+				position: absolute;
+       			top: 0;
+       			left: 0; 
+	        	width: 95px;
+		    	height: 95px;
+		    	border: solid 4px #FFF;
+	        }
+
+			.mask {
+				border-radius: 50%;
+				background: #000;
+				@include opacity(0);
+				@include transition(all 0.3s);
+
+				.toolbar {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					@include translate(-50%, -50%);
+
+					a {
+						font-size: 1.5em;
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+
+	       		&:hover {
+					@include opacity(.7);
+	       		}
+			}
+	    }
+
+	    .toolbar {
+			position: relative;
+	        top: 150px;
+	        left: 70%;
+	    }
+
+		#btn-reset-cover, #btn-reset-avatar {
+			display: none;
+		}
+    }
+}

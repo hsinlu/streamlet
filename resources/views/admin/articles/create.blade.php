@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-@include('particles.errors', ['errors' => $errors])
 <div class="article-edit">
 <form id="article-form" method="POST" action="{{ url('admin/articles/store') }}" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">

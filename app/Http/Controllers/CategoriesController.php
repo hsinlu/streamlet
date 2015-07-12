@@ -16,8 +16,9 @@ class CategoriesController extends Controller
     	$category = Category::where('slug', $slug)->firstOrFail();
     	$articles = Article::with('tags', 'category')
     					->where('category_id', $category->id)
-    					->orderby('published_at', 'desc')
-    					->paginate(8);
+    					->public()
+    					->latest('published_at')
+    					->paginate(setting_value('paginate_size'));
         return view('categories.index', ['category' => $category, 'articles' => $articles]);
     }
 }

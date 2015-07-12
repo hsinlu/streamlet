@@ -27,8 +27,8 @@ class ArticlesController extends Controller
         return view('articles.index', [
             'articles' => Article::with('tags', 'category')
                             ->public()
-                            ->orderby('published_at', 'desc')
-                            ->paginate(8),
+                            ->latest('published_at')
+                            ->paginate(setting_value('paginate_size')),
         ]);
     }
 

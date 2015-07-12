@@ -15,10 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // share setting to all views
-        view()->share('settings', Cache::rememberForever('settings', function () {
-            return Setting::select('name', 'value')->get();
-        }));
+        
     }
 
     /**

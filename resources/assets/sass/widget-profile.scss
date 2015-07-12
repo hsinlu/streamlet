@@ -2,18 +2,18 @@
     .cover {
         background-size: cover;
         height: 110px;
-    }
 
-    .avatar img {
-        position: absolute;
-        top: 40px;
-        left: 20%;
-        margin-left: -47px;
-        width: 95px;
-        height: 95px;
-        border: solid 4px #FFF;
+        .avatar img {
+            position: relative;
+            top: 40px;
+            left: 20%;
+            margin-left: -47px;
+            width: 95px;
+            height: 95px;
+            border: solid 4px #FFF;
+        }
     }
-
+    
     .bio {
         padding: 10px 20px 30px 20px;
     }

@@ -1,15 +1,15 @@
 <article class="widget widget-article article">
     <header class="article-header">
         <h2 class="article-title">
-            <a href="{{ url('/articles/' . $article->slug) }}" rel="bookmark">{{ $article->title }}</a>
+            <a href="{{ url('articles', [$article->slug]) }}" rel="bookmark">{{ $article->title }}</a>
         </h2>
 
         <div class="article-meta">
-            <a href="{{ url('/date/' . $article->published_at) }}">
+            <a href="{{ url('date', [$article->published_at]) }}">
                 <i class="fa fa-calendar-o"></i>
                 <time class="entry-date published" pubdate>{{ $article->published_at }}</time>
             </a>
-            <a href="{{ url('/category/' . $article->category->slug) }}">
+            <a href="{{ url('categories', [$article->category->slug]) }}">
                 <i class="fa fa-folder-o"></i>
                 {{ $article->category->name }}
             </a>
@@ -17,7 +17,7 @@
             <div>
                 <i class="fa fa-tag"></i>
                 @foreach($article->tags as $tag)
-                    <a href="{{ url('/tags/' . $tag->slug) }}">{{ $tag->name }}</a>
+                    <a href="{{ url('tags', [$tag->slug]) }}">{{ $tag->name }}</a>
                 @endforeach
             </div>
         </div>
@@ -25,7 +25,7 @@
 
     @if(isset($article->cover))
         <div class="article-thumbnail reveal-on-scroll" data-animation="fadeInUp 1.5s">
-            <a href="{{ url('/articles/' . $article->slug) }}">
+            <a href="{{ url('articles', [$article->slug]) }}">
                 <img src="{{ $article->cover }}"
                      alt="{{ $article->title }}"/>
             </a>
@@ -40,25 +40,25 @@
 
     <div class="article-actions">
         @if($bio)
-            <a class="read-more pull-left" href="{{ url('/articles/' . $article->slug) }}">
+            <a class="read-more pull-left" href="{{ url('articles', [$article->slug]) }}">
                 READ MORE
             </a>
         @endif
         <div class="share pull-right">
             <span class="text-uppercase">share</span>
-            <a href="http://v.t.sina.com.cn/share/share.php?url={{ url('/articles/' . $article->slug) }}&title={{ $article->title }}" target="_blank">
+            <a href="http://v.t.sina.com.cn/share/share.php?url={{ url('articles', [$article->slug]) }}&title={{ $article->title }}" target="_blank">
                 <i class="fa fa-weibo"></i>
             </a>
-            <a href="http://v.t.qq.com/share/share.php?url={{ url('/articles/' . $article->slug) }}&title={{ $article->title }}" target="_blank">
+            <a href="http://v.t.qq.com/share/share.php?url={{ url('articles', [$article->slug]) }}&title={{ $article->title }}" target="_blank">
                 <i class="fa fa-tencent-weibo"></i>
             </a>
-            <a href="https://twitter.com/share?text={{ $article->title }}&url={{ url('/articles/' . $article->slug) }}" target="_blank">
+            <a href="https://twitter.com/share?text={{ $article->title }}&url={{ url('articles', [$article->slug]) }}" target="_blank">
                 <i class="fa fa-twitter"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('/articles/' . $article->slug) }}" target="_blank">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('articles', [$article->slug]) }}" target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
-            <a href="https://plus.google.com/share?url={{ url('/articles/' . $article->slug) }}" target="_blank">
+            <a href="https://plus.google.com/share?url={{ url('articles', [$article->slug]) }}" target="_blank">
                 <i class="fa fa-google-plus"></i>
             </a>
         </div>

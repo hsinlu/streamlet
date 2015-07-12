@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-@include('particles.errors', ['errors' => $errors])
 <div class="article-edit">
 <form id="article-form" method="POST" action="{{ url('admin/articles/update/' . $article->slug) }}" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -15,9 +14,9 @@
         <div class="col-md-9">
             <div class="form-group">
                 <input id="title" name="title" type="text" class="title"
-                value="{{ $article->title }}" placeholder="{{ trans('strings.admin.article_edit.title_placeholder') }}" required/>
+                value="{{ old('title', $article->title) }}" placeholder="{{ trans('strings.admin.article_edit.title_placeholder') }}" required/>
                 <textarea id="editor" name="body" placeholder="{{ trans('strings.admin.article_edit.body_placeholder') }}" required>
-                {{ $article->body }}
+                {{ old('body', $article->body) }}
                 </textarea>
             </div>
         </div>
@@ -25,7 +24,7 @@
             <div class="form-group">
                 <div class="image-uploader">
                     <span class="media"></span>
-                    <img src="{{ $article->cover }}">
+                    <img src="{{ old('cover', $article->cover) }}">
                     <div class="description">{{ trans('strings.admin.article_edit.cover')}}</div>
                     <input type="file" name="cover">
                     <button type="button" class="close"><span>&times;</span></button>
@@ -34,7 +33,7 @@
 
             <div class="form-group">
                 <label for="slug">{{ trans('strings.admin.article_edit.article_url') }}</label>
-                <input id="slug" type="text" class="form-control" name="slug" placeholder="Article Url" v-text="slug" value="{{ $article->slug }}"/>
+                <input id="slug" type="text" class="form-control" name="slug" placeholder="Article Url" v-text="slug" value="{{ old('slug', $article->slug) }}"/>
                 <p class="help-block">{{ url('/') }}/@{{slug}}</p>
             </div>
 
@@ -42,7 +41,7 @@
                 <label for="category">{{ trans('strings.admin.article_edit.article_category') }}</label>
                 <select name="category" id="category" class="form-control" multiple required>
                     @foreach($categories as $category)
-                        <option value="{{ $category->name }}" {{ $article->category->name ==  $category->name ? 'selected="selected"' : '' }}>{{ $category->name }}</option>
+                        <option value="{{ $category->name }}" {{ old('category', $article->category->name) ==  $category->name ? 'selected="selected"' : '' }}>{{ $category->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -51,14 +50,14 @@
                 <label for="tags">{{ trans('strings.admin.article_edit.article_tags') }}</label>
                 <select name="tags[]" id="tags" class="form-control" value="{{ $article->tags }}" multiple>
                     @foreach($tags as $tag)
-                        <option value="{{ $tag->name }}" {{ $article->tags->contains('name', $tag->name) ? 'selected="selected"' : '' }}>{{ $tag->name }}</option>
+                        <option value="{{ $tag->name }}" {{ collect(old('tags[]', $article->tags))->contains('name', $tag->name) ? 'selected="selected"' : '' }}>{{ $tag->name }}</option>
                     @endforeach
                 </select>
             </div>
 
             <div class="checkbox">
                 <label>
-                    <input name="public" type="checkbox" {{ $article->public ? 'checked' : '' }}>{{ trans('strings.admin.article_edit.public') }}
+                    <input name="public" type="checkbox" {{ old('public', $article->public) ? 'checked' : '' }}>{{ trans('strings.admin.article_edit.public') }}
                 </label>
             </div>
 

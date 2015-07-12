@@ -6,7 +6,7 @@
     <hr/>
     <div>
         @foreach($tags as $tag)
-            <a href="{{ url('tags/' . $tag->slug) }}">{{ $tag->name }}</a>
+            <a href="{{ url('tags', [$tag->slug]) }}">{{ $tag->name }}</a>
             <span class="badge">{{ $tag->articles_count }}</span>
         @endforeach
     </div>
