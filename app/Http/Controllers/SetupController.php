@@ -25,10 +25,12 @@ class SetupController extends Controller
             ['name' => 'cover', 'value' => 'images/cover.jpg'],
             ['name' => 'avatar', 'value' => 'images/avatar.png'],
 			['name' => 'bio', 'value' => e($request->input('bio'))],
+            ['name' => 'email', 'value' => 'hsinlu@live.com'],
 			['name' => 'title', 'value' => e($request->input('title'))],
 			['name' => 'subtitle', 'value' => e($request->input('subtitle'))],
 			['name' => 'keywords', 'value' => e($request->input('keywords'))],
 			['name' => 'description', 'value' => e($request->input('description'))],
+            ['name' => 'paginate_size', 'value' => 5],
     	]);
 
     	event(new \App\Events\DoneSetupEvent);
