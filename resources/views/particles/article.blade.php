@@ -5,7 +5,7 @@
         </h2>
 
         <div class="article-meta">
-            <a href="{{ url('date', [$article->published_at]) }}">
+            <a href="{{ url('date', [Carbon\Carbon::parse($article->published_at)->toDateString()]) }}">
                 <i class="fa fa-calendar-o"></i>
                 <time class="entry-date published" pubdate>{{ $article->published_at }}</time>
             </a>

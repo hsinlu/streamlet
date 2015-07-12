@@ -56,6 +56,9 @@ Route::get('categories/{slug}', 'CategoriesController@index');
 // Tags routes
 Route::get('tags/{slug}', 'TagsController@index');
 
+// Date routes
+Route::get('date/{date}', 'DateController@index');
+
 // Knots routes
 Route::group(['prefix' => 'knots'], function () {
     Route::get('/', 'KnotsController@index');
