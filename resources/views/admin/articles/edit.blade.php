@@ -33,7 +33,7 @@
 
             <div class="form-group">
                 <label for="slug">{{ trans('strings.admin.article_edit.article_url') }}</label>
-                <input id="slug" type="text" class="form-control" name="slug" placeholder="Article Url" v-text="slug" value="{{ old('slug', $article->slug) }}"/>
+                <input id="slug" type="text" class="form-control" name="slug" placeholder="Article Url" v-model="slug" value="{{ old('slug', $article->slug) }}"/>
                 <p class="help-block">{{ url('/') }}/@{{slug}}</p>
             </div>
 
@@ -88,7 +88,6 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/image-uploader.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/config.js') }}"></script>
     <script src="{{ asset('js/select2.min.js') }}"></script>

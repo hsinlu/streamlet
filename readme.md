@@ -30,11 +30,6 @@ composer install #mac或linux系统如果没有权限，请添加sudo指令
 npm install #mac或linux系统如果没有权限，请添加sudo指令
 ```
 
-#### 安装bower所依赖的模块（可选，如果您不需要更改代码）
-```bash
-bower install #mac或linux系统如果没有权限，请添加sudo指令
-```
-
 #### 配置运行
 ```bash
 cp .env.example .env #更改DB对应的配置

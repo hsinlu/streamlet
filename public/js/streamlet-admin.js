@@ -1,19 +1,4 @@
 /**
- * auto close alerts
- * @param  {[type]} $ [description]
- * @return {[type]}   [description]
- */
-(function ($) {
-	$(function() { 
-		setTimeout(function () {
-			$(".alert-success").each(function () {
-				var self = $(this);
-				self.fadeOut(3000);
-			});
-		}, 5000);
-	});
-})(window.jQuery);
-/**
  * read image, return real local path
  * @param  file   file     
  * @param  Function callback 
@@ -128,6 +113,21 @@ function readImage(file, callback) {
 			avatar_img.attr("src", original_avatar);
 			btn_reset_avatar.hide();
 		});
+	});
+})(window.jQuery);
+/**
+ * auto close alerts
+ * @param  {[type]} $ [description]
+ * @return {[type]}   [description]
+ */
+(function ($) {
+	$(function() { 
+		setTimeout(function () {
+			$(".alert-success").each(function () {
+				var self = $(this);
+				self.fadeOut(3000);
+			});
+		}, 5000);
 	});
 })(window.jQuery);
 //# sourceMappingURL=streamlet-admin.js.map

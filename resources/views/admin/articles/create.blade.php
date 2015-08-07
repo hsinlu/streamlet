@@ -87,7 +87,6 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/image-uploader.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('vendor/ckeditor/config.js') }}"></script>
     <script src="{{ asset('js/select2.min.js') }}"></script>

@@ -8,7 +8,6 @@
     <title>{{ setting_value('title') }}</title>
     <meta name="description" content="{{ setting_value('description') }}"/>
     <meta name="keywords" content="{{ setting_value('keywords') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/streamlet-admin.css') }}">
     @yield('header')
