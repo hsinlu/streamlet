@@ -82,7 +82,7 @@ class ArticlesController extends Controller
         // create article
         $article = with(new Article)->fill($request->all());
         $article->slug = empty($article->slug) ? str_slug(pinyin($article->title)) : $article->slug;
-        $article->cover = $this->saveCover($request, $article->slug);
+        $article->cover = $this->saveCover($request, $article);
         $article->user_id = $auth->user()->id;
         $article->category_id = $category->id;
         $article->public = $request->has('public') ? 1 : 0;
