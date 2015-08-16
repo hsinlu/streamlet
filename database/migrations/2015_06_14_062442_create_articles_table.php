@@ -17,9 +17,9 @@ class CreateArticlesTable extends Migration
             $table->string('title', 150);
             $table->string('slug')->unique();
             $table->text('body');
-            $table->text('cover');
-            $table->string('meta_title', 150);
-            $table->string('meta_description');
+            $table->text('cover')->nullable();
+            $table->string('meta_title', 150)->nullable();
+            $table->string('meta_description')->nullable();
             $table->integer('click')->default(0);
             $table->timestamp('published_at');
             $table->boolean('public')->default(true);
