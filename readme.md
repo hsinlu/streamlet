@@ -1,4 +1,4 @@
-![streamlet](https://dn-coding-net-production-static.qbox.me/2f906fe6-a1bd-49bf-9662-cec3e9c80a7b.png)
+<img src="https://dn-coding-net-production-static.qbox.me/2f906fe6-a1bd-49bf-9662-cec3e9c80a7b.png" alt="streamlet" width="150" height="150">
 
 # Streamlet
 
@@ -10,24 +10,30 @@ Streamlet是一款基于Laravel 5.1框架的开源个人博客，目前正在开
 3. Mbstring PHP 扩展
 4. Tokenizer PHP 扩展
 5. nodejs
-6. bower
-7. composer
+6. composer
 
 ## 安装
 
 #### 使用git clone指令下载最新的代码
 ```bash
-git clone https://git.coding.net/hsinlu/streamlet.git #mac或linux系统如果没有权限，请添加sudo指令
+git clone https://git.coding.net/hsinlu/streamlet.git
 ```
 
 #### 安装php所依赖的模块
 ```bash
-composer install #mac或linux系统如果没有权限，请添加sudo指令
+composer install
 ```
 
-#### 安装node所依赖的模块（可选，如果您不需要更改代码）
+#### 安装node所依赖的模块
 ```bash
-npm install #mac或linux系统如果没有权限，请添加sudo指令
+npm install
+```
+
+#### 运行gulp
+```bash
+gulp
+
+# gulp --production
 ```
 
 #### 配置运行

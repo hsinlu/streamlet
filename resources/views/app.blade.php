@@ -8,8 +8,8 @@
     <title>{{ setting_value('title') }}</title>
     <meta name="description" content="{{ setting_value('description') }}"/>
     <meta name="keywords" content="{{ setting_value('keywords') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/streamlet.css') }}">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/streamlet.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -109,7 +109,6 @@
                     </p>
                 </div>
             </div>
-            {{-- @include('widgets.qrcode') --}}
             @include('widgets.categories')
             @include('widgets.tags')
             @include('widgets.recent')
@@ -141,9 +140,8 @@
         <i class="fa fa-angle-up"></i>
     </div>
 </div>
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/jquery.qrcode.min.js') }}"></script>
-<script src="{{ asset('js/streamlet.js') }}"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/streamlet.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @extends('admin.app')
 
 @section('header')
-<link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+<link rel="stylesheet" href="/css/select2.min.css">
 @endsection
 
 @section('content')
@@ -87,10 +87,10 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ asset('vendor/ckeditor/config.js') }}"></script>
-    <script src="{{ asset('js/select2.min.js') }}"></script>
-    <script src="{{ asset('js/vue.min.js') }}"></script>
+    <script src="/vendor/ckeditor/ckeditor.js"></script>
+    <script src="/vendor/ckeditor/config.js"></script>
+    <script src="/js/select2.min.js"></script>
+    <script src="/js/vue.min.js"></script>
     <script type="text/javascript">
         $(function () {
             CKEDITOR.replace("editor", {
@@ -110,7 +110,7 @@
             placeholder: "{{ trans('strings.choose_tags') }}"
         });
 
-        var article_form = new Vue({
+        new Vue({
             el: '#article-form',
             data: {
                 slug: ''

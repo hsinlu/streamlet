@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
+    "ckeditor-dev": "^4.4.8",
     "font-awesome": "^4.4.0",
     "jquery": "^2.1.4",
     "laravel-elixir": "^3.0.0",

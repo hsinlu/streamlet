@@ -8,8 +8,8 @@
     <title>{{ setting_value('title') }}</title>
     <meta name="description" content="{{ setting_value('description') }}"/>
     <meta name="keywords" content="{{ setting_value('keywords') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/streamlet-admin.css') }}">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/streamlet-admin.css">
     @yield('header')
 </head>
 <body>
@@ -63,9 +63,9 @@
     @include('particles.errors', ['errors' => $errors])
     @yield('content')
 </div>
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/streamlet-admin.js') }}"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/streamlet-admin.js"></script>
 @yield('scripts')
 </body>
 </html>
