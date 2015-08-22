@@ -28,6 +28,7 @@ class ArticleRequest extends Request
             'slug' => 'unique:articles,slug',
             'body' => 'required',
             'category' => 'required|max:30',
+            'cover' => 'sometimes|mimes:jpg,jpeg,png,bmp',
         ];
 
         if ($this->is('admin/articles/update/*')) {
