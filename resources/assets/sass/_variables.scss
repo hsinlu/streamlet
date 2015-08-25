@@ -1,7 +1,80 @@
+// default line height
+$line-height: 1.5;
+// default padding top when navbar fixed top
+$padding-top: 90px;
+// default font weight
+$font-weight: 300;
+// default background color
 $background-color: #f5f5f5;
+// default background dark color
 $background-color-dark: #242628;
+// default color
 $color: #666;
+// default active color
 $active-color: #ff0a60;
-$widget-space: 30px;
+
+// navbar
+// 
+// navbar default padding
+$navbar-padding: 10px;
+// navbar background color
+$navbar-background: #fff;
+// navbar default opacity
+$navbar-opacity: 0.9;
+// navbar brand margin top
+$navbar-brand-margin-top: -10px;
+// navbar brand small text font size
+$navbar-brand-small-font-size: 10px;
+// navbar search box width
+$navbar-search-width: 200px;
+// navbar search box padding
+$navbar-search-padding: 0 5px;
+
+
+// widget 
+// 
+// default widget space
+$widget-space: 20px;
+// default widget padding
+$widget-padding: 20px;
+// default widget background color
 $widget-background-color: #fff;
-$widget-border-color: #e7e7e7;
+// default widget border color
+$widget-border: #e7e7e7 1px;
+
+// widget article
+// 
+$widget-article-thumbnail-padding: 10px 0;
+$widget-article-thumbnail-max-height: 420px;
+$widget-article-content-padding: 10px 0;
+$widget-article-actions-margin-bottom: 50px;
+
+// widget profile
+// 
+$widget-profile-padding: 0;
+$widget-profile-cover-height: 110px;
+$widget-profile-cover-avatar-img-top: 40px;
+$widget-profile-cover-avatar-img-left: 20%;
+$widget-profile-cover-avatar-img-margin-left: -47px;
+$widget-profile-cover-avatar-img-width: 95px;
+$widget-profile-cover-avatar-img-height: 95px;
+$widget-profile-cover-avatar-img-border: solid 4px #FFF;
+$widget-profile-bio-padding: 10px 20px 30px 20px;
+
+// footer
+// 
+$footer-padding: 30px 0;
+
+// toolbar
+// 
+$toolbar-right: 20px;
+$toolbar-bottom: 20px;
+$toolbar-scroll-to-top-width: 30px;
+$toolbar-scroll-to-top-height: 30px;
+$toolbar-scroll-to-top-border-radius: 30px;
+
+// alert panel
+// 
+$alert-panel-left: 10px;
+$alert-panel-bottom: 0;
+$alert-panel-z-index: 999;

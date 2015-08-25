@@ -51,11 +51,13 @@
                 </li>
                 @if(Auth::check())
                     <li>
-                        <a href="{{ url('admin/articles/hub') }}"><i class="fa fa-list-alt"></i>Hub</a>
+                        <a href="{{ url('admin/articles/hub') }}">Hub</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}
+                           aria-haspopup="true" aria-expanded="false">
+                           <img class="img-circle avatar" src="{{ asset(setting_value('avatar')) }}">
+                           {{ Auth::user()->name }}
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">

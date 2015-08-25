@@ -1,21 +1,20 @@
 .toolbar {
 
-
 }
 
 .toolbar-right-bottom {
 	position: fixed;
-	right: 20px;
-	bottom: 20px;
+	right: $toolbar-right;
+	bottom: $toolbar-bottom;
 	
 	.scroll-to-top {
 		text-align: center;
 		color: fade-out(#fff, .2);
 		background: fade-out(#000, .5);
-		width: 30px;
-		height: 30px;
+		width: $toolbar-scroll-to-top-width;
+		height: $toolbar-scroll-to-top-height;
 		cursor: pointer;
-		border-radius: 2px;
+		border-radius: $toolbar-scroll-to-top-border-radius;
 		display: none;
 
 		&:hover {

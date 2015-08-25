@@ -1,0 +1,38 @@
+.navbar .navbar-nav > li > a {
+    color: $color;
+    @include transition(color 0.4s);
+
+    &:hover {
+        color: $active-color;    
+    }
+}
+
+.navbar {
+    background: $navbar-background;
+    padding: $navbar-padding;
+    @include opacity($navbar-opacity);
+}
+
+.navbar .avatar {
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-brand {
+    margin-top: $navbar-brand-margin-top;
+}
+
+.navbar-brand small {
+    font-size: $navbar-brand-small-font-size;
+}
+
+.navbar .search {
+    width: $navbar-search-width;
+    padding: $navbar-search-padding;
+
+    .form-control:focus,
+    .form-control:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}

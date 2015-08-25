@@ -1,5 +1,5 @@
 .widget-article {
-    padding: 20px 40px 20px 40px;
+    
 }
 
 .article {
@@ -10,11 +10,12 @@
     }
 
     .article-thumbnail {
-        padding: 40px 0 10px 0;
+        padding: $widget-article-thumbnail-padding;
 
         img {
-            width: 100%;
-            height: 420px;
+            width: auto;
+            max-width: 100%;
+            max-height: $widget-article-thumbnail-max-height;
             @include scale(1);
             @include transition(all 1s);
 
@@ -25,12 +26,12 @@
     }
 
     .article-content {
-        padding: 20px 0 20px 0;
+        padding: $widget-article-content-padding;
         border-bottom: solid 1px #e8e8e8;
     }
 
     .article-actions {
-        margin-bottom: 50px;
+        margin-bottom: $widget-article-actions-margin-bottom;
 
         .read-more {
             border-top: solid 1px $active-color;

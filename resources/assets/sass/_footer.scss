@@ -1,6 +1,5 @@
 footer {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding: $footer-padding;
 	background-color: $background-color-dark;
 
 	.copyright {
