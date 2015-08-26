@@ -67,24 +67,10 @@
                         </ul>
                     </li>
                 @endif
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-search"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <div class="search">
-                            <form action="{{ url('search') }}" class="form-inline">
-                                <div class="input-group">
-                                    <input name="words" type="text" class="form-control" placeholder="{{ trans('strings.tips.input_search_words') }}">
-                                    <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-default pull-right">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div> 
-                            </form>
-                        </div>
-                    </ul>
+                <li>
+                    <form action="{{ url('search') }}" class="form-inline">
+                        <input name="words" type="text" placeholder=" {{ trans('strings.tips.input_search_words') }}" class="form-control search">
+                    </form>
                 </li>
             </ul>
         </nav>

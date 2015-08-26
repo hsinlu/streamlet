@@ -27,12 +27,29 @@
 }
 
 .navbar .search {
-    width: $navbar-search-width;
-    padding: $navbar-search-padding;
+    width: 20px;
+    @include transition(all .3s ease);
+    border: 1px solid #fff;
+    box-shadow: none;
+    background: url("/images/search-icon.jpg") no-repeat 10px 8px;
+    padding: 0 5px 0 35px;
+    color: #fff;
+    margin-top: 8px;
 
-    .form-control:focus,
-    .form-control:active {
-        outline: none !important;
-        box-shadow: none !important;
+    &:focus {
+        width: 180px;
+        border: 1px solid #eaeaea;
+        @include transition(all .3s ease);
+        color: #c8c8c8;
+        margin-left: 10px;
     }
+
+    // width: $navbar-search-width;
+    // padding: $navbar-search-padding;
+
+    // .form-control:focus,
+    // .form-control:active {
+    //     outline: none !important;
+    //     box-shadow: none !important;
+    // }
 }
