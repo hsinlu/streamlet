@@ -5,8 +5,10 @@
         @foreach($articles as $article)
             @include('particles.article', [ 'article'=> $article, 'bio' => true])
         @endforeach
-        <div class="widget text-center">
-            {!! $articles->render() !!}
-        </div>
+        @if($articles->hasPages())
+	        <div class="widget text-center">
+	            {!! $articles->render() !!}
+	        </div>
+        @endif
     </div>
 @endsection
