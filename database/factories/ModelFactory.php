@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function ($faker) {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => 'hsinlu',
         'slug' => str_slug('hsinlu'),
@@ -26,7 +26,7 @@ $factory->define(App\User::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Category::class, function ($faker) {
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
     $sentence = $faker->sentence($nbWords = 2);
     return [
         'name' => $sentence,
@@ -34,7 +34,7 @@ $factory->define(App\Category::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Tag::class, function ($faker) {
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
     $word = $faker->word;
     return [
         'name' => $word,
@@ -42,7 +42,7 @@ $factory->define(App\Tag::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Article::class, function ($faker) {
+$factory->define(App\Article::class, function (Faker\Generator $faker) {
     $title = $faker->sentence($nbWords = 6);
     $body = $faker->text($maxNbChars = 5000);
     return [
@@ -57,7 +57,7 @@ $factory->define(App\Article::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Knot::class, function ($faker) {
+$factory->define(App\Knot::class, function (Faker\Generator $faker) {
     return [
         'brief' => $faker->text($maxNbChars = 300),
         'like_number'=> $faker->numberBetween($min = 500, $max = 800),

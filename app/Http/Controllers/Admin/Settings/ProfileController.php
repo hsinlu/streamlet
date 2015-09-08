@@ -57,7 +57,7 @@ class ProfileController extends Controller
             $file = $request->file($name);
             
             if (!$file->isValid()) {
-                throw new Exception(trans('validation.image_not_invalid'));
+                throw new Exception(trans('strings.image_not_invalid'));
             }
 
             $filename = $name . '.' . $file->getClientOriginalExtension();

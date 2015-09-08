@@ -20,7 +20,7 @@ class ImagesController extends Controller
     		$file = $request->file('upload');
 
             if (!$file->isValid()) {
-                throw new Exception(trans('validation.image_not_invalid'));
+                throw new Exception(trans('strings.image_not_invalid'));
             }
 
             $filename = uniqid() . time() . '.' . $file->getClientOriginalExtension();

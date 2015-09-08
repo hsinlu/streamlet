@@ -173,7 +173,7 @@ class ArticlesController extends Controller
         $file = $request->file('cover');
 
         if (!$file->isValid()) {
-            throw new Exception(trans('validation.image_not_invalid'));
+            throw new Exception(trans('strings.image_not_invalid'));
         }
 
         $filename = $article->slug . '.' . $file->getClientOriginalExtension();
