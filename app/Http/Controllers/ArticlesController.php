@@ -28,7 +28,7 @@ class ArticlesController extends Controller
             'articles' => Article::with('tags', 'category')
                             ->public()
                             ->latest('published_at')
-                            ->paginate(setting_value('paginate_size')),
+                            ->simplePaginate(setting_value('paginate_size')),
         ]);
     }
 

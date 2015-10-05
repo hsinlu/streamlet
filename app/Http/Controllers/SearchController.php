@@ -28,7 +28,7 @@ class SearchController extends Controller
         return view('search.index',[
             'articles' => $query->public()
             					->latest('published_at')
-                            	->paginate(setting_value('paginate_size')),
+                            	->simplePaginate(setting_value('paginate_size')),
         ]);
     }
 }

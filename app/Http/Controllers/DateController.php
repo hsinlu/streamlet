@@ -23,7 +23,7 @@ class DateController extends Controller
         				->whereBetween('published_at', [$startDate, $endDate])
 		                ->public()
 		                ->latest('published_at')
-		                ->paginate(setting_value('paginate_size'));
+		                ->simplePaginate(setting_value('paginate_size'));
 
         return view('date.index', ['articles' => $articles]);
     }

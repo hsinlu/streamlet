@@ -55,10 +55,10 @@ class ComposerServiceProvider extends ServiceProvider
     {
         view()->composer('widgets.recent', function ($view) {
             $view->with('articles', Cache::remember('widgets_recent', 10, function() {
-                return Article::select('title', 'slug')
+                return Article::with('tags', 'category')
                             ->public()
                             ->orderby('published_at', 'desc')
-                            ->take(8)
+                            ->take(5)
                             ->get();
             }));
         });

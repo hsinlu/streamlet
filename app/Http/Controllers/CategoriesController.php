@@ -18,7 +18,7 @@ class CategoriesController extends Controller
     					->where('category_id', $category->id)
     					->public()
     					->latest('published_at')
-    					->paginate(setting_value('paginate_size'));
+    					->simplePaginate(setting_value('paginate_size'));
         return view('categories.index', ['category' => $category, 'articles' => $articles]);
     }
 }

@@ -18,7 +18,7 @@ use App\Tag;
 class ArticlesController extends Controller
 {
     /**
-     * Edit or delete article
+     * Show articles list
      * 
      * @param  string $slug [description]
      * @return [type]       [description]
