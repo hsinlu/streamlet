@@ -12,6 +12,12 @@ Streamlet是一款基于Laravel 5.1框架的开源个人博客，目前正在开
 5. nodejs
 6. composer
 
+## 截图
+
+![Streamlet 1](http://7xn9nh.com1.z0.glb.clouddn.com/Streamlet1.png)
+![Streamlet 2](http://7xn9nh.com1.z0.glb.clouddn.com/Streamlet2.png)
+![Streamlet 3](http://7xn9nh.com1.z0.glb.clouddn.com/Streamlet3.png)
+![Streamlet 3](http://7xn9nh.com1.z0.glb.clouddn.com/Streamlet4.png)
 ## 安装
 
 #### 使用git clone指令下载最新的代码
@@ -81,3 +87,4 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
