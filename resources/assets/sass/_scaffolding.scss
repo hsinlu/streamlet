@@ -1,7 +1,7 @@
 body {
-    background-color: $background-color !important;
+    background-color: $bg !important;
     color: $color;
-    padding-top: $padding-top;
+    // padding-top: $padding-top;
     line-height: $line-height;
     font-weight: $font-weight;
 }
@@ -11,6 +11,10 @@ a {
     @include transition(color 0.4s);
 
     &:hover {
-        color: $active-color;
+        color: $primary-color;
     }
+}
+
+button {
+    border-radius: 999em;
 }

@@ -1,11 +1,20 @@
 <article class="widget widget-article article">
-    <header class="article-header">
-        <h2 class="article-title">
-            <a href="{{ url('articles', [$article->slug]) }}" rel="bookmark">{{ $article->title }}</a>
-        </h2>
+    <header class="header">
+        <div class="avatar pull-left">
+            <img class="img-circle" src="{{ asset(setting_value('avatar')) }}">
+        </div>
 
-        <div class="article-meta">
-            <a href="{{ url('date', [Carbon\Carbon::parse($article->published_at)->toDateString()]) }}">
+        <div class="meta">
+            <div class="title">
+                <a href="/">{{ $article->user->name }}</a>
+                in 
+                <a href="{{ url('categories', [$article->category->slug]) }}">{{ $article->category->name }}</a>
+            </div>
+            <div class="time">
+                <time class="entry-date published" pubdate>{{ Carbon\Carbon::parse($article->published_at)->diffForHumans() }}</time>
+            </div>
+                
+{{--             <a href="{{ url('date', [Carbon\Carbon::parse($article->published_at)->toDateString()]) }}">
                 <i class="fa fa-calendar-o"></i>
                 <time class="entry-date published" pubdate>{{ $article->published_at }}</time>
             </a>
@@ -19,12 +28,12 @@
                 @foreach($article->tags as $tag)
                     <a href="{{ url('tags', [$tag->slug]) }}">{{ $tag->name }}</a>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </header>
 
     @if(isset($article->cover))
-        <div class="article-thumbnail reveal-on-scroll" data-animation="fadeInUp 1.5s">
+        <div class="article-thumbnail">
             <a href="{{ url('articles', [$article->slug]) }}">
                 <img src="{{ $article->cover }}"
                      alt="{{ $article->title }}"/>
@@ -32,9 +41,13 @@
         </div>
     @endif
 
+    <h4 class="article-title">
+        <a href="{{ url('articles', [$article->slug]) }}" rel="bookmark">{{ $article->title }}</a>
+    </h4>
+
     <div class="article-content">
         <p>
-            {!! $bio ? str_limit(strip_tags($article->body, 500)) : $article->body !!}
+            {!! $bio ? str_limit(strip_tags($article->body, 500), 500) : $article->body !!}
         </p>
     </div>
 

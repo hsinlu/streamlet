@@ -3,12 +3,12 @@
     @include transition(color 0.4s);
 
     &:hover {
-        color: $active-color;    
+        color: $primary-color;    
     }
 }
 
 .navbar {
-    background: $navbar-background;
+    background: $navbar-bg;
     padding: $navbar-padding;
     @include opacity($navbar-opacity);
 }

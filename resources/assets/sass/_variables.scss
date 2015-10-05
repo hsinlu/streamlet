@@ -1,24 +1,41 @@
 // default line height
-$line-height: 1.5;
+$line-height: 1.2;
 // default padding top when navbar fixed top
-$padding-top: 90px;
+$padding-top: 70px;
 // default font weight
 $font-weight: 300;
 // default background color
-$background-color: #f5f5f5;
+$bg: #fff;
 // default background dark color
 $background-color-dark: #242628;
 // default color
 $color: #666;
-// default active color
-$active-color: #ff0a60;
+// default primary color
+$primary-color: #57ad68;
+
+$line-color: #e8e8e8;
+
+
+// Small screen / tablet
+$screen-sm: 768px !default;
+
+// Medium screen / desktop
+$screen-md: 992px !default;
+
+// Large screen / wide desktop
+$screen-lg: 1200px !default;
+
+
+
+$sidebar-bg: #fafafa;
+$sidebar-padding: 20px 0;
 
 // navbar
 // 
 // navbar default padding
 $navbar-padding: 10px;
 // navbar background color
-$navbar-background: #fff;
+$navbar-bg: #fff;
 // navbar default opacity
 $navbar-opacity: 0.9;
 // navbar brand margin top
@@ -34,18 +51,18 @@ $navbar-search-padding: 0 5px;
 // widget 
 // 
 // default widget space
-$widget-space: 20px;
+$widget-space: 0;
 // default widget padding
 $widget-padding: 20px;
 // default widget background color
-$widget-background-color: #fff;
+$widget-bg: transparent;
 // default widget border color
 $widget-border: #e7e7e7 1px;
 
 // widget article
 // 
 $widget-article-thumbnail-padding: 10px 0;
-$widget-article-thumbnail-max-height: 420px;
+$widget-article-thumbnail-max-height: 200px;
 $widget-article-content-padding: 10px 0;
 $widget-article-actions-margin-bottom: 50px;
 
@@ -71,7 +88,7 @@ $toolbar-right: 20px;
 $toolbar-bottom: 20px;
 $toolbar-scroll-to-top-width: 30px;
 $toolbar-scroll-to-top-height: 30px;
-$toolbar-scroll-to-top-border-radius: 30px;
+$toolbar-scroll-to-top-border-radius: 15px;
 
 // alert panel
 // 

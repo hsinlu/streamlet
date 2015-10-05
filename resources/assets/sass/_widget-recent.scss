@@ -5,9 +5,36 @@
         padding: 0;
 
         li {
-            i {
-                margin-right: 5px;
-                @include opacity(0.5);
+            margin: 10px 0;
+
+            button {
+                width: 40px;
+                height: 40px;
+                background: #fff;
+                border: solid 1px fade_out(#000, 0.8);
+                pointer-events: none !important;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            div {
+                float: none;
+                padding-left: 50px;
+
+                h4 {
+                    margin-top: 0;
+                    white-space: nowrap;
+                    max-width: 96%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 14px;
+                }
+
+                hr {
+                    margin: 10px 0;
+                }
             }
         }
     }

@@ -1,16 +1,27 @@
 <div class="widget widget-recent">
-    <h4>
-        <i class="fa fa-fire fa-2"></i>
-        {{ trans('strings.widgets.recent_title') }}
-    </h4>
-    <hr/>
+    <div class="header clearfix">
+        <h3 class="header-title pull-left">
+            {{ trans('strings.widgets.recent_title') }}
+        </h3>
+        <a class="header-title pull-right" href="articles">more</a>
+    </div>
     <ul>
-        @foreach($articles as $article)
-        <li>
-            <i class="fa fa-file-o"></i>
-            <a href="{{ url('articles', [$article->slug]) }}">   
-                {{ $article->title }}
-            </a>
+        @foreach($articles as $index => $article)
+        <li class="clearfix">
+            <button class="pull-left">
+                <span>{{ $index + 1 }}</span>
+            </button>
+            <div>
+                <h4>
+                    <a href="{{ url('articles', [$article->slug]) }}">   
+                        {{ $article->title }}
+                    </a>
+                </h4>
+                <a href="{{ url('categories', [$article->category->slug]) }}">{{ $article->category->name }}</a>
+                @if($index + 1 < count($articles))
+                    <hr>
+                @endif
+            </div>
         </li>
         @endforeach
     </ul>

@@ -1,5 +1,4 @@
-$grid-gutter-width:         20px !default;
-$container-large-desktop:      (1200px + $grid-gutter-width) !default;
+$grid-gutter-width:         20px;
 
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -11,6 +10,7 @@ $container-large-desktop:      (1200px + $grid-gutter-width) !default;
 @import "animations";
 
 @import "scaffolding";
+@import "layout";
 @import "navbar";
 @import "pagination";
 @import "footer";
@@ -22,5 +22,3 @@ $container-large-desktop:      (1200px + $grid-gutter-width) !default;
 @import "widget-recent";
 @import "toolbar";
 @import "alerts-panel";
-
-@import "plugins/reveal-on-scroll";

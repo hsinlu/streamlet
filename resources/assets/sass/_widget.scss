@@ -1,6 +1,20 @@
 .widget {
-	background: $widget-background-color;
+	background: $widget-bg;
 	border: $widget-border;
 	margin-bottom: $widget-space;
 	padding: $widget-padding;
+
+	.header {
+		margin-bottom: 15px;
+		border-top: solid 1px $line-color;
+
+		.header-title {
+			font-size: 11px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-top: 0;
+			border-top: solid 1px $primary-color;
+			padding-top: 16px;
+		}
+	}
 }

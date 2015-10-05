@@ -1,9 +1,9 @@
 <div class="widget widget-categories">
-    <h4>
-        <i class="fa fa-folder-o"></i>
-        {{ trans('strings.widgets.categories_title') }}
-    </h4>
-    <hr/>
+    <div class="header clearfix">
+        <h3 class="header-title pull-left">
+            {{ trans('strings.widgets.categories_title') }}
+        </h3>    
+    </div>
     <ul>
         @foreach($categories as $category)
         <li>

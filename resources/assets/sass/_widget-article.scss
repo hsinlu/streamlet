@@ -3,9 +3,33 @@
 }
 
 .article {
-    .article-header {
-        .article-meta > a {
-            margin-right: 20px;
+    .header {
+        border: none;
+
+        .avatar img {
+            width: 36px;
+            height: 36px;
+        }
+
+        .article-title {
+            margin-top: -10px;
+        }
+
+        .meta {
+            float: none;
+            padding-left: 50px;
+
+            .title {
+                font-size: 15px;
+                
+                a {
+                    color: $primary-color;
+                }
+            }
+
+            .time {
+                font-size: 10px;
+            }
         }
     }
 
@@ -16,25 +40,28 @@
             width: auto;
             max-width: 100%;
             max-height: $widget-article-thumbnail-max-height;
-            @include scale(1);
-            @include transition(all 1s);
+            // @include scale(1);
+            // @include transition(all 1s);
 
-            &:hover {
-                @include scale(1.05);
-            }
+            // &:hover {
+            //     @include scale(1.05);
+            // }
         }
     }
 
     .article-content {
         padding: $widget-article-content-padding;
         border-bottom: solid 1px #e8e8e8;
+        p {
+            line-height: 1.5em;
+        }
     }
 
     .article-actions {
         margin-bottom: $widget-article-actions-margin-bottom;
 
         .read-more {
-            border-top: solid 1px $active-color;
+            border-top: solid 1px $primary-color;
             margin-top: -1px;
             padding: 10px 0 10px 0;
         }

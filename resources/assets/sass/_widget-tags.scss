@@ -1,3 +1,13 @@
 .widget-tags {
+	.btn-tag {
+		// border-color: $primary-color;
+		margin: 7px 0;
+		border-radius: 3px;
 
+		&:hover {
+			color: #fff;
+			background: fade_out($primary-color, 0.3);
+			border-color: fade_in($primary-color, 0.4);
+		}
+	}
 }

@@ -4,7 +4,7 @@ elixir(function(mix) {
     mix
     // bootstrap
     .copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'public/js')
-    .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/', 'public/fonts')
+    .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/', 'public/fonts/bootstrap/')
     // fontawesome
     .copy('node_modules/font-awesome/css/font-awesome.min.css', 'public/css')
     .copy('node_modules/font-awesome/fonts/', 'public/fonts')
@@ -24,9 +24,9 @@ elixir(function(mix) {
     .sass('admin/streamlet-admin.scss')
 
     .scripts([
-        'plugins/scroll-to-top.js',
+        'plugins/compute-float-layout.js',
         'plugins/toggle-visibility-navbar.js',
-        'plugins/reveal-on-scroll.js',
+        'plugins/on-scroll.js',
         'plugins/auto-close-alerts.js'
     ], 'public/js/streamlet.js')
     .scripts([
