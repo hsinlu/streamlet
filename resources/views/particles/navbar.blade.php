@@ -46,7 +46,7 @@
                 @endif
                 <li>
                     <form action="{{ url('search') }}" class="form-inline">
-                        <input name="words" type="text" placeholder=" {{ trans('strings.tips.input_search_words') }}" class="form-control search">
+                        <input name="words" type="search" placeholder="{{ trans('strings.tips.input_search_words') }}" class="form-control search">
                     </form>
                 </li>
             </ul>

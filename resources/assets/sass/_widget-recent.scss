@@ -13,6 +13,7 @@
                 background: #fff;
                 border: solid 1px fade_out(#000, 0.8);
                 pointer-events: none !important;
+                border-radius: $border-radius;
 
                 span {
                     font-weight: bold;

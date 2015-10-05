@@ -43,6 +43,6 @@ return [
 	'image_not_invalid' => 'The image is not invalid.',
 
 	'tips' => [
-		'input_search_words' => 'Search some words...'
+		'input_search_words' => 'Search Streamlet'
 	],
 ];

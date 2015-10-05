@@ -1,5 +1,20 @@
 $grid-gutter-width:         20px;
 
+$border-radius: 999em;
+
+// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            $border-radius;
+//** Large `.form-control` border radius
+$input-border-radius-large:      $border-radius;
+//** Small `.form-control` border radius
+$input-border-radius-small:      $border-radius;
+
+$btn-border-radius-base:         $border-radius;
+$btn-border-radius-large:        $border-radius;
+$btn-border-radius-small:        $border-radius;
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // variables
