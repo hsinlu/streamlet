@@ -19,7 +19,7 @@ class TagsController extends Controller
                         ->with('tags', 'category')
                         ->public()
                         ->latest('published_at')
-                        ->paginate(setting_value('paginate_size'));
+                        ->simplePaginate(setting_value('paginate_size'));
         return view('tags.index', ['tag' => $tag, 'articles' => $articles]);
     }
 }
