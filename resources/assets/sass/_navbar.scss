@@ -10,7 +10,7 @@
 .navbar {
     background: $navbar-bg;
     padding: $navbar-padding;
-    @include opacity($navbar-opacity);
+    // @include opacity($navbar-opacity);
 }
 
 .navbar .avatar {
@@ -27,22 +27,21 @@
 }
 
 .navbar .search {
-    width: 20px;
-    @include transition(all .3s ease);
-    border: 1px solid #fff;
+    width: 180px;
+    // @include transition(all .3s ease);
+    border: 1px solid $primary-color;
     box-shadow: none;
     background: url("/images/search-icon.jpg") no-repeat 10px 8px;
-    padding: 0 5px 0 35px;
-    color: #fff;
-    margin-top: 8px;
+    padding: 0 35px;
+    margin: 10px 15px 0 15px;
 
-    &:focus {
-        width: 180px;
-        border: 1px solid #eaeaea;
-        @include transition(all .3s ease);
-        color: #c8c8c8;
-        margin-left: 10px;
-    }
+    // &:focus {
+    //     // width: 180px;
+    //     // border: 1px solid #eaeaea;
+    //     @include transition(all .3s ease);
+    //     color: #c8c8c8;
+    //     margin-left: 10px;
+    // }
 
     // width: $navbar-search-width;
     // padding: $navbar-search-padding;

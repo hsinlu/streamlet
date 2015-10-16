@@ -3,6 +3,11 @@
 }
 
 .article {
+    @media(min-width: $screen-lg) {
+        width: 50%;
+        float: left;
+    }
+
     .header {
         border: none;
 
@@ -54,6 +59,7 @@
         border-bottom: solid 1px #e8e8e8;
         p {
             line-height: 1.5em;
+            font-family: Georgia, 楷体;
         }
     }
 
