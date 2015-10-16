@@ -6,8 +6,6 @@
     </div>
     <div>
         @foreach($tags as $tag)
-            {{-- <a href="{{ url('tags', [$tag->slug]) }}">{{ $tag->name }}</a> --}}
-            {{-- <span class="badge">{{ $tag->articles_count }}</span> --}}
             <a class="btn btn-default btn-tag" href="{{ url('tags', [$tag->slug]) }}">{{ $tag->name }}</a>
             {{-- <span class="badge">{{ $tag->articles_count }}</span> --}}
         @endforeach

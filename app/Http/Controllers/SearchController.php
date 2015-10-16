@@ -25,7 +25,7 @@ class SearchController extends Controller
 			$query->where('title', 'like', '%'. $words . '%');
 		}
 
-        return view('search.index',[
+        return view('search',[
             'articles' => $query->public()
             					->latest('published_at')
                             	->simplePaginate(setting_value('paginate_size')),

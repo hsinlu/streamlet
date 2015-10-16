@@ -15,6 +15,8 @@ return [
 	'choose_tags' => 'Choose tags',
 	'edit' => 'Edit',
 	'delete' => 'Delete',
+	'hub' => 'Hub',
+	'new_article' => 'New Article',
 
 	'widgets' => [
 		'categories_title' => 'Categories',

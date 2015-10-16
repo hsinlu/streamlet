@@ -19,6 +19,6 @@ class CategoriesController extends Controller
     					->public()
     					->latest('published_at')
     					->simplePaginate(setting_value('paginate_size'));
-        return view('categories.index', ['category' => $category, 'articles' => $articles]);
+        return view('categories', ['category' => $category, 'articles' => $articles]);
     }
 }

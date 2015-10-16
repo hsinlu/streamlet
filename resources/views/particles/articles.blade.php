@@ -4,8 +4,11 @@
     @empty
     	<p>找不到任何文章...</p>
     @endforelse
+</div>
+<div class="clearfix"></div>
+<div class="widget widget-pagination">
     @if($articles->hasPages())
-        <div class="widget text-center">
+        <div class="text-center">
             {!! $articles->render() !!}
         </div>
     @endif
