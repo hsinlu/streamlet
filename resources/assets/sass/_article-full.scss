@@ -1,0 +1,132 @@
+.article-full-container {
+
+    .article-full {
+        position: relative;
+        top: 100px;
+
+        .profile-container,
+        .header,
+        .title,
+        .content,
+        .tags,
+        .actions {
+            width: $article-full-content-width;
+        }
+
+        .profile-container {
+            margin: 50px auto;
+            padding: 30px 0;
+            border-top: solid 1px fade-out($line-color, .4);
+            // border-bottom: solid 1px $line-color;
+        }
+
+        .profile {
+            width: 50%;
+
+            .avatar img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .meta {
+                padding-left: 60px;
+                font-family: Georgia, 楷体;
+
+                p {
+                    font-size: .9em;
+                }
+            }
+        }
+
+        .header {
+            border: none;
+            margin: auto;
+            margin-bottom: 15px;
+
+            .avatar img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .meta {
+                float: none;
+                padding-left: 50px;
+
+                .meta-title {
+                    font-size: 15px;
+                    
+                    a {
+                        color: $primary-color;
+                    }
+                }
+
+                .time {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .cover {
+            padding: 20px 0;
+            text-align: center;
+
+            img {
+                width: auto;
+                height: 100%;
+                margin: auto;
+            }
+        }
+
+        .title {
+            margin: auto;
+            font-size: 3em;
+            font-family: Georgia, 楷体;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            margin: auto;
+            padding: $widget-article-content-padding;
+
+            p {
+                line-height: 2em;
+                font-family: Georgia, 楷体;
+            }
+        }
+
+        .tags {
+            margin: auto;
+            padding: 15px 0;
+        }
+
+        .actions {
+            margin: auto;
+
+            margin-bottom: $widget-article-actions-margin-bottom;
+            border-top: solid 1px #e8e8e8;
+
+            .share {
+                padding: 10px 0 10px 0;
+                margin-right: 30px;
+
+                span {
+                    margin-right: 10px;
+                }
+
+                a {
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        width: $article-full-content-width;
+        margin: auto;
+        margin-top: 100px;
+    }
+}

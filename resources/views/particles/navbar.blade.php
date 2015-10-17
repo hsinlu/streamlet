@@ -20,9 +20,9 @@
                 <li>
                     <a class="text-uppercase" href="{{ url('articles') }}">{{ trans('strings.articles') }}</a>
                 </li>
-                <li>
+ {{--                <li>
                     <a class="text-uppercase" href="{{ url('knots') }}">Knots</a>
-                </li>
+                </li> --}}
                 <li>
                     <a class="text-uppercase" href="{{ url('projects') }}">{{ trans('strings.projects') }}</a>
                 </li>

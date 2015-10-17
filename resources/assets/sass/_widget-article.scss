@@ -1,5 +1,14 @@
 .widget-article {
-    
+    position: relative;
+}
+
+.detail {
+    top: 80px;
+    margin: auto;
+
+    @media(min-width: $screen-md) {
+        width: 760px;
+    }
 }
 
 .article {
@@ -24,7 +33,7 @@
             float: none;
             padding-left: 50px;
 
-            .title {
+            .meta-title {
                 font-size: 15px;
                 
                 a {
@@ -54,9 +63,16 @@
         }
     }
 
+    .article-cover {
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+
     .article-content {
         padding: $widget-article-content-padding;
-        border-bottom: solid 1px #e8e8e8;
+        
         p {
             line-height: 1.5em;
             font-family: Georgia, 楷体;
@@ -65,6 +81,7 @@
 
     .article-actions {
         margin-bottom: $widget-article-actions-margin-bottom;
+        border-top: solid 1px #e8e8e8;
 
         .read-more {
             border-top: solid 1px $primary-color;

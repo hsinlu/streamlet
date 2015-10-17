@@ -1,15 +1,15 @@
 /**
- * auto close alerts
+ * compute float layout height
  * @param  {[type]} $ [description]
  * @return {[type]}   [description]
  */
 (function ($) {
 	$(function() { 
-		var containerFloat = $(".container-float");
-		var sidebar = $(".container-float .sidebar");
+		var content = $(".container-float .content");
+		var sidebar = $(".container-float .sidebar .sidebar-content");
 
-		if (containerFloat.height() < sidebar.height()) {
-			containerFloat.height(sidebar.height());
+		if (content.height() < sidebar.height()) {
+			content.height(sidebar.height());
 		};
 	});
 })(window.jQuery);

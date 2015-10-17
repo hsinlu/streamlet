@@ -5,7 +5,7 @@
         </div>
 
         <div class="meta">
-            <div class="title">
+            <div class="meta-title">
                 <a href="/">{{ $article->user->name }}</a>
                 in 
                 <a href="{{ url('categories', [$article->category->slug]) }}">{{ $article->category->name }}</a>
