@@ -65,7 +65,7 @@ class SettingTableSeeder extends Seeder
 
         Setting::create([
             'name' => 'paginate_size',
-            'value' => '5',
+            'value' => '8',
             'description' => 'How many articles should be displayed on each page.',
         ]);
 
